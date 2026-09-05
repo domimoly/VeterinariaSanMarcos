@@ -678,3 +678,134 @@ header {
         font-size: 1.05rem;
     }
 }
+
+/* 9. PERFIL *\
+/* =========================================
+   ESTILOS DE LOGIN Y REGISTRO (CLIENTE)
+   ========================================= */
+
+.contenedor-perfil {
+    padding: 40px 20px;
+    max-width: var(--ancho-contenido);
+    margin: 0 auto;
+}
+
+/* En móviles (>= 360px), los formularios se apilan en una columna */
+.formularios-auth {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Estilos base de las cajas de formulario */
+.auth-seccion {
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+    padding: 30px;
+    box-shadow: var(--sombra);
+    margin-top: 0 !important; /* Fuerza a que ninguna caja tenga margen superior que la desalinee */
+    height: fit-content; /* Permite que la caja mida solo lo necesario según su contenido */
+}
+
+/* --- ESCRITORIO (>= 1280px) --- */
+@media (min-width: 1280px) {
+    .formularios-auth {
+        flex-direction: row;
+        align-items: flex-start; /* Asegura que ambas cajas comiencen exactamente en la misma línea superior */
+        justify-content: space-between;
+        gap: 40px;
+    }
+    
+    .auth-seccion {
+        flex: 1; /* Ambas cajas toman el mismo ancho (50%) */
+    }
+}
+
+.auth-seccion h2 {
+    margin-bottom: 20px;
+    color: var(--color-secundario);
+}
+
+.formulario label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-texto-suave);
+    margin-bottom: 5px;
+    display: block;
+}
+
+.formulario input, 
+.formulario select {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.auth-links {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.auth-links a {
+    color: var(--color-primario);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}
+
+.btn-ancho {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.ubicacion-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+/* Solo para ocultar etiquetas visualmente pero mantenerlas para lectores de pantalla */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* --- TABLETS (>= 768px) --- */
+@media (min-width: 768px) {
+    .ubicacion-grid {
+        flex-direction: row;
+    }
+    .campo-select {
+        flex: 1;
+    }
+}
+
+
+/* Mensajes de validación dinámica */
+.error-msg {
+    color: #d9534f; /* Rojo para errores */
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    display: block;
+    min-height: 15px; /* Evita que el formulario salte cuando aparece el texto */
+}
+
+/* Borde rojo para el input con error */
+.input-error {
+    border-color: #d9534f !important;
+    outline-color: #d9534f !important;
+}
+

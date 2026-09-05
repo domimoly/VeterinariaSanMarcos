@@ -1,1 +1,127 @@
-<!-- Pendiente -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Inicia sesión o regístrate en Veterinaria San Marcos">
+  <title>Mi Perfil | Veterinaria San Marcos</title>
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+  <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
+  
+  <!-- Barra de contacto superior (Idéntica a index.html) -->
+  <div class="barra-contacto">
+    <p> Av. San Marcos 123, Santiago | +56 9 1234 5678 | Urgencias 24 hrs - 365 días</p>
+  </div>
+
+  <!-- Header y Menú de Navegación (Estilo de index.html con integración Mobile First) -->
+  <header class="cabecera-sitio">
+    <a class="marca" href="index.html">Veterinaria San Marcos</a>
+    
+    <!-- Botón Hamburguesa -->
+    <button class="menu-hamburguesa" id="btn-menu" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav aria-label="Navegación principal" class="navegacion" id="navegacion">
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+        <!-- Se usa aria-current="page" para marcar la página activa -->
+        <li><a href="mi-perfil.html" aria-current="page">Mi Perfil</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido Principal: Formularios de Auth -->
+  <main id="contenido-principal" class="contenedor-perfil">
+      <div class="formularios-auth">
+          
+          <!-- Sección Iniciar Sesión -->
+          <section class="auth-seccion" id="login">
+              <h2 class="titulo-centrado">Iniciar sesión</h2>
+              <form action="#" method="POST" id="form-login" class="formulario">
+                  <fieldset>
+                      <legend class="sr-only">Tus datos de acceso</legend>
+                      
+                      <label for="correo-login">Correo</label>
+                      <input type="email" id="correo-login" name="correo" placeholder="ejemplo@correo.com" required>
+
+                      <label for="pass-login">Contraseña</label>
+                      <input type="password" id="pass-login" name="password" placeholder="********" required>
+
+                      <button type="submit" class="boton">Iniciar sesión</button>
+                  </fieldset>
+                  <div class="auth-links">
+                      <p>¿No tienes cuenta? <a href="#registro">Regístrate</a></p>
+                      <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+                  </div>
+              </form>
+          </section>
+
+          <!-- Sección Crear Cuenta / Registro de Usuario -->
+          <section class="auth-seccion" id="registro">
+              <h2 class="titulo-centrado">Registro de usuario</h2>
+              <form action="#" method="POST" id="form-registro" class="formulario">
+                  <fieldset>
+                      <legend class="sr-only">Tus datos personales</legend>
+                      
+                      <label for="nombre-reg">NOMBRE COMPLETO</label>
+                      <input type="text" id="nombre-reg" name="nombre" required>
+
+                      <label for="correo-reg">CORREO</label>
+                      <input type="email" id="correo-reg" name="correo" required>
+
+                      <label for="pass-reg">CONTRASEÑA</label>
+                      <input type="password" id="pass-reg" name="password" required>
+
+                      <label for="pass-conf-reg">CONFIRMAR CONTRASEÑA</label>
+                      <input type="password" id="pass-conf-reg" name="password_confirm" required>
+
+                      <label for="telefono-reg">TELÉFONO (opcional)</label>
+                      <input type="tel" id="telefono-reg" name="telefono">
+
+                      <div class="ubicacion-grid">
+                          <div class="campo-select">
+                              <label for="region-reg" class="sr-only">Región</label>
+                              <select id="region-reg" name="region" required>
+                                  <option value="">-- Seleccione la región --</option>
+                                  <option value="rm">Región Metropolitana de Santiago</option>
+                                  <option value="araucania">Región de la Araucanía</option>
+                                  <option value="nuble">Región de Ñuble</option>
+                              </select>
+                          </div>
+                          <div class="campo-select">
+                              <label for="comuna-reg" class="sr-only">Comuna</label>
+                              <select id="comuna-reg" name="comuna" required>
+                                  <option value="">-- Seleccione la comuna --</option>
+                                  <option value="santiago">Santiago</option>
+                                  <option value="nunoa">Ñuñoa</option>
+                              </select>
+                          </div>
+                      </div>
+
+                      <button type="submit" class="boton btn-ancho">REGISTRAR</button>
+                  </fieldset>
+              </form>
+          </section>
+
+      </div>
+  </main>
+
+  <!-- Pie de página (Footer) idéntico a index.html -->
+  <footer class="pie-sitio">
+    <p><strong>Veterinaria San Marcos</strong></p>
+    <address>Contacto: <a href="mailto:hola@vetsanmarcos.cl">hola@vetsanmarcos.cl</a></address>
+    <p><small>Proyecto académico - Desarrollo FullStack II</small></p>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
