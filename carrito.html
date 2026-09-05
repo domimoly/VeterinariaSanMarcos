@@ -1,1 +1,92 @@
-<!-- Pendiente -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Carrito de compras de Veterinaria San Marcos">
+  <title>Carrito | Veterinaria San Marcos</title>
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+  <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
+  <div class="barra-contacto">
+    <p> Av. San Marcos 123, Santiago | +56 9 1234 5678 | Urgencias 24 hrs · 365 días</p>
+  </div>
+  <header class="cabecera-sitio">
+    <a class="marca" href="index.html">Veterinaria San Marcos</a>
+    <nav aria-label="Navegación principal">
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="carrito.html" aria-current="page">Carrito</a></li>
+        <li><a href="mi-perfil.html">Mi Perfil</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido-principal">
+    <header class="encabezado-pagina">
+      <h1>Carrito</h1>
+    </header>
+
+    <section aria-label="Carrito y resumen de compra" class="atencion">
+      <div class="tarjeta">
+        <div class="grilla-tarjetas">
+          <div class="atencion-imagen">
+            <img src="https://placehold.co/150x150" alt="Imagen del producto">
+          </div>
+          <div>
+            <p><strong>Nombre del producto</strong></p>
+            <p class="etiqueta">Marca</p>
+            <p>"Descripción del producto"</p>
+            <p><strong>$0</strong> 
+            <p>
+              <button type="button">−</button>
+              1
+              <button type="button">+</button>
+            </p>
+            <p><button type="button">Eliminar</button></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tarjeta">
+        <h2 id="titulo-resumen">Resumen de la compra</h2>
+        <p>Productos (0): <strong>$0</strong></p>
+        <p>Descuentos (0): <strong>$0</strong></p>
+        <p>Total: <strong>$0</strong></p>
+        <button type="button" class="boton">Continuar compra</button>
+      </div>
+    </section>
+
+    <section aria-labelledby="titulo-sugeridos">
+      <h2 id="titulo-sugeridos" class="titulo-centrado">¿Y si le sumas algo más?</h2>
+      <div class="grilla-tarjetas">
+        <div class="tarjeta">
+          <img src="https://placehold.co/150x150" alt="Producto sugerido">
+          <p class="etiqueta">Marca</p>
+          <p><strong>Nombre del producto</strong></p>
+          <p><strong>$0</strong> </p>
+          <a class="boton" href="tienda.html">Ver producto</a>
+        </div>
+        <div class="tarjeta">
+          <img src="https://placehold.co/150x150" alt="Producto sugerido">
+          <p class="etiqueta">Marca</p>
+          <p><strong>Nombre del producto</strong></p>
+          <p><strong>$0</strong> </p>
+          <a class="boton" href="tienda.html">Ver producto</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-sitio">
+    <p><strong>Veterinaria San Marcos</strong></p>
+    <address>Contacto: <a href="mailto:hola@vetsanmarcos.cl">hola@vetsanmarcos.cl</a></address>
+    <p><small>Proyecto académico · Desarrollo FullStack II</small></p>
+  </footer>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
