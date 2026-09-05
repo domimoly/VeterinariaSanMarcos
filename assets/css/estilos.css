@@ -418,3 +418,263 @@ textarea:focus {
 }
 
 /* 7. Multimedia y utilidades */
+
+
+
+/* 8.Servicios */
+/* Estilos para el contenedor de servicios */
+.servicios-contenedor {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.servicios-contenedor h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* Grid para organizar los Superlinks */
+.superlinks-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Diseño interactivo del Superlink (Tarjeta/Botón) */
+.superlink-card {
+    background-color: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    width: 250px;
+    padding: 20px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Efecto Hover (cuando el usuario pasa el mouse) */
+.superlink-card:hover {
+    transform: translateY(-5px);
+    border-color: #3498db;
+    box-shadow: 0 8px 15px rgba(52, 152, 219, 0.2);
+}
+
+.superlink-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.superlink-card h3 {
+    margin: 0 0 10px 0;
+    color: #3498db;
+    font-size: 1.2rem;
+}
+
+.superlink-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Estilo para las secciones de destino */
+.detalle-servicio {
+    padding: 50px 20px;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+}
+
+/* Estilos base del header y menú (Desktop) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Ocultar botón hamburguesa en Desktop */
+.menu-hamburguesa {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-hamburguesa span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* --- MEDIA QUERY PARA MOBILE (menor a 768px) --- */
+@media (max-width: 768px) {
+    /* Mostrar botón hamburguesa */
+    .menu-hamburguesa {
+        display: flex;
+    }
+
+    /* Ocultar navegación por defecto y adaptarla a menú desplegable */
+    .navegacion {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    /* Clase activa para mostrar el menú desde JS */
+    .navegacion.activa {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+    }
+
+    .nav-links li {
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+    }
+}
+
+/* Contenedor horizontal que permite scroll si no caben en pantalla (Mobile) */
+.servicios-fila {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap; /* En desktop se acomodan en filas si es necesario */
+}
+
+/* Diseño estilo "botón" de la segunda imagen */
+.servicio-btn {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #1a4a75; /* Azul oscuro similar a la imagen */
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.servicio-btn:hover {
+    background-color: #f0f8ff;
+    border-color: #3498db;
+    transform: translateY(-2px);
+}
+
+.servicio-btn .icono {
+    font-size: 1.2rem;
+}
+
+/* Ajuste específico para que en Mobile (menor a 768px) no se rompa el diseño */
+@media (max-width: 768px) {
+    .servicios-fila {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0 20px;
+    }
+    
+    .servicio-btn {
+        justify-content: center;
+        padding: 15px;
+    }
+}
+
+/* =========================================
+   ESTILOS DE LOS BOTONES DE SERVICIOS
+   ========================================= */
+
+/* Contenedor horizontal (Desktop) que agrupa los botones */
+.servicios-fila {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap; 
+}
+
+/* Diseño del recuadro blanco con borde sutil */
+.servicio-btn {
+    background-color: var(--color-superficie); /* Blanco */
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--color-secundario); /* Azul oscuro de tu paleta */
+    font-weight: 700;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por encima */
+.servicio-btn:hover {
+    border-color: var(--color-secundario);
+    box-shadow: 0 4px 8px rgba(42, 115, 157, 0.15);
+    transform: translateY(-2px);
+    background-color: #f4f7fa;
+}
+
+.servicio-btn .icono {
+    font-size: 1.4rem;
+}
+
+/* =========================================
+   MEDIA QUERY MOBILE FIRST (Pantallas pequeñas)
+   ========================================= */
+@media (max-width: 768px) {
+    /* Los botones se apilan uno sobre otro en móviles */
+    .servicios-fila {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0 20px;
+    }
+    
+    /* Centramos el contenido del botón para que se vea mejor en el celular */
+    .servicio-btn {
+        justify-content: center;
+        padding: 15px;
+        font-size: 1.05rem;
+    }
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,15 @@
   <title>Inicio | Veterinaria San Marcos</title>
   <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Talleres y actividades de Conecta Cultura">
+  <title>Inicio | Veterinaria San Marcos</title>
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+
 <body>
   <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
   <div class="barra-contacto">
@@ -14,42 +24,76 @@
   </div>
   <header class="cabecera-sitio">
     <a class="marca" href="index.html">Veterinaria San Marcos</a>
+    <!-- Botón Hamburguesa -->
+
+    <button class="menu-hamburguesa" id="btn-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
     <nav aria-label="Navegación principal">
       <ul class="menu">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li> 
-        <li><a href="servicios.html" aria-current="page">Servicios</a></li>
-        <li><a href="tienda.html">Tienda</a></li> 
-        <li><a href="carrito.html">Carrito</a></li> 
-        <li><a href="mi-perfil.html">Mi Perfil</a></li> 
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+        <li><a href="mi-perfil.html">Mi Perfil</a></li>
       </ul>
     </nav>
   </header>
 
-  <main id="contenido-principal">
-    <section class="presentacion">
-      <div class="presentacion-contenido">
-        <header class="encabezado-pagina">
-          <h1>Tu mascota sana y más feliz con un veterinario en casa</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus volutpat volutpat.
-              Donec eros erat, porta sollicitudin sollicitudin vel, venenatis maximus mauris.</p>
-        </header>
-      </div>
-      <div class="presentacion-imagen">
-        <img src="https://placehold.co/600x600" alt="Veterinario atendiendo a una mascota en su hogar">
-      </div>
-    </section>
 
-    <section aria-label="Servicios destacados">
-      <ul class="tira-servicios">
-        <li class="servicio-item"><a href="servicios.html">Servicio 1</a></li>
-        <li class="servicio-item"><a href="servicios.html">Servicio 2</a></li>
-        <li class="servicio-item"><a href="servicios.html">Servicio 3</a></li>
-        <li class="servicio-item"><a href="servicios.html">Servicio 4</a></li>
-        <li class="servicio-item"><a href="servicios.html">Servicio 5</a></li>
-        <li class="servicio-item"><a href="servicios.html">Servicio 6</a></li>
-      </ul>
-    </section>
+  <section class="servicios-contenedor">
+    <h2>Nuestros Servicios Veterinarios</h2>
+    <p>Haz clic en cualquiera de nuestros servicios para conocer más detalles y agendar una hora para tu mascota.</p>
+
+    <div class="servicios-fila">
+      <!-- Servicio 1 -->
+      <a href="#consulta" class="servicio-btn">
+        <span class="icono">🩺</span>
+        <span class="titulo">Consulta General</span>
+      </a>
+
+      <!-- Servicio 2 -->
+      <a href="#vacunacion" class="servicio-btn">
+        <span class="icono">💉</span>
+        <span class="titulo">Vacunación</span>
+      </a>
+
+      <!-- Servicio 3 -->
+      <a href="#cirugia" class="servicio-btn">
+        <span class="icono">🏥</span>
+        <span class="titulo">Cirugía Menor</span>
+      </a>
+
+      <!-- Servicio 4 -->
+      <a href="#desparasitacion" class="servicio-btn">
+        <span class="icono">💊</span>
+        <span class="titulo">Desparasitación</span>
+      </a>
+
+      <!-- Servicio 5 -->
+      <a href="#peso" class="servicio-btn">
+        <span class="icono">⚖️</span>
+        <span class="titulo">Control de Peso</span>
+      </a>
+
+      <!-- Servicio 6 (NUEVO) -->
+      <a href="#examenes" class="servicio-btn">
+        <span class="icono">🔬</span>
+        <span class="titulo">Exámenes Clínicos</span>
+      </a>
+    </div>
+  </section>
+
+  
+  <section id="consulta-general" class="detalle-servicio">
+    <h2>Detalle: Consulta General</h2>
+    <p>Información detallada sobre la consulta general, valores y horarios...</p>
+    
+  </section>
   </main>
 
   <footer class="pie-sitio">
@@ -59,4 +103,5 @@
   </footer>
   <script src="assets/js/app.js"></script>
 </body>
+
 </html>
