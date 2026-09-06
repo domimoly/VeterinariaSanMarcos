@@ -550,3 +550,142 @@ textarea:focus {
   text-decoration: none;
 }
 /* - - - - - - - */
+
+/* USUARIO | Página de  Login y Registro */
+.banner-pagina {
+  margin: 0 0 1.5rem;
+  padding: 1rem;
+  text-align: center;
+  color: var(--color-secundario);
+  background: var(--color-superficie);
+  border-radius: var(--radio);
+}
+
+.cuenta {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 48rem) {
+  .cuenta {
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+  }
+}
+
+.cuenta-formulario .formulario {
+  max-width: none;
+  gap: 0.6rem; /* ✅ NUEVO: antes heredaba el gap:1rem por defecto, quedaba muy alargado */
+}
+
+.cuenta-formulario .error {
+  margin: 0 0 0.25rem; /* ✅ NUEVO: menos espacio reservado por campo (antes min-height:1.1rem) */
+  min-height: 0.9rem;
+  font-size: 0.8rem;
+}
+
+.cuenta-formulario h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.cuenta-formulario .formulario {
+  max-width: none;
+}
+
+.campos-en-linea {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.cuenta-imagen {
+  background: var(--color-borde);
+  border-radius: var(--radio);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cuenta-imagen img {
+  width: min(100%, 22rem); /* ✅ NUEVO: cuadrada, ya no estira a todo el alto */
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radio);
+}
+
+.cuenta-enlace {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.panel-registro {
+  max-width: 46rem;
+  margin-inline: auto;
+}
+
+.formulario--horizontal fieldset {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cuenta-enlace-destacado {
+  margin: 1.25rem 0 0;
+  padding: 0.85rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ffffff;
+  background: var(--color-secundario);
+  border-radius: var(--radio);
+}
+
+.cuenta-imagen {
+  background: var(--color-borde);
+  border-radius: var(--radio);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+/* - - - - - - - */
+.agenda {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 48rem) {
+  .agenda {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.agenda-contenido h1 {
+  margin-top: 0;
+  color: var(--color-primario-oscuro);
+}
+
+.boton-agenda {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  color: #ffffff;
+  background: var(--color-secundario);
+  border-radius: var(--radio);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.agenda-imagen img {
+  width: 100%;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
