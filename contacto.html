@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contáctanos: formulario de contacto y ubicación de Veterinaria San Marcos.">
+  <title>Contacto | Veterinaria San Marcos</title>
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+  <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
+
+  <div class="barra-contacto">
+    <p> Av. San Marcos 123, Rancagua | +56 9 1234 5678 | Urgencias 24 hrs · 365 días</p>
+  </div>
+
+  <header class="cabecera-sitio">
+    <a class="marca" href="index.html">Veterinaria San Marcos</a>
+    <nav aria-label="Navegación principal">
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="mi-perfil.html">Mi Perfil</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido-principal">
+    <header class="encabezado-contacto">
+      <h1>Contacto</h1>
+      <p>¿Tienes dudas? Contáctanos para resolverlas.</p>
+    </header>
+
+    <section class="contacto" aria-label="Formulario de contacto y ubicación">
+      <div class="contacto-formulario">
+        <h2>Formulario de Contacto</h2>
+        <form class="formulario" id="form-contacto" novalidate>
+          <fieldset>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" autocomplete="name" placeholder="Ej: Juan Pérez" required>
+            <p class="error" id="error-nombre" aria-live="polite"></p>
+
+            <label for="correo">Correo</label>
+            <input type="email" id="correo" name="correo" autocomplete="email" placeholder="ejemplo@correo.cl" required>
+            <p class="error" id="error-correo" aria-live="polite"></p>
+
+            <label for="comentario">Comentario</label>
+            <textarea id="comentario" name="comentario" rows="5" placeholder="Cuéntanos en qué podemos ayudarte" required></textarea>
+            <p class="error" id="error-comentario" aria-live="polite"></p>
+
+            <button type="submit">Enviar</button>
+            <p class="mensaje-exito" id="mensaje-exito" role="status"></p>
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="contacto-mapa">
+        <iframe
+          title="Ubicación de Veterinaria San Marcos en el mapa"
+          src="https://www.google.com/maps?q=Av.+San+Marcos+123,+Santiago&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-sitio">
+    <p><strong>Veterinaria San Marcos</strong></p>
+    <address>Contacto: <a href="mailto:contacto@veterinariasanmarcos.cl">contacto@veterinariasanmarcos.cl</a> |<a href="contacto.html" aria-current="page">Contáctanos</a></address>
+    <p><small>Proyecto académico · Desarrollo FullStack II</small></p>
+  </footer>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
