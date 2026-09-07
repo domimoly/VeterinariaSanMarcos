@@ -15,14 +15,21 @@
   </div>
 
   <header class="cabecera-sitio">
-    <a class="marca" href="index.html">Veterinaria San Marcos</a>
+    <div class="cabecera-fila">
+      <a class="marca" href="index.html">Veterinaria San Marcos</a>
+      <button type="button" class="boton-menu" id="boton-menu" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Abrir menú</span>
+        <span aria-hidden="true">☰</span>
+      </button>
+    </div>
     <nav aria-label="Navegación principal">
-      <ul class="menu">
+      <ul class="menu" id="menu-principal">
         <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="servicios.html">Servicios</a></li>
         <li><a href="tienda.html">Tienda</a></li>
-        <li><a href="mi-perfil.html">Mi Perfil</a></li>
         <li><a href="carrito.html">Carrito</a></li>
+        <li><a href="mi-perfil.html">Mi Perfil</a></li>
       </ul>
     </nav>
   </header>
@@ -38,20 +45,29 @@
         <h2>Formulario de Contacto</h2>
         <form class="formulario" id="form-contacto" novalidate>
           <fieldset>
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" autocomplete="name" placeholder="Ej: Juan Pérez" required>
-            <p class="error" id="error-nombre" aria-live="polite"></p>
+            <div class="campo-formulario">
+              <label for="nombre">Nombre</label>
+              <input id="nombre" name="nombre" type="text" maxlength="50" autocomplete="name"
+                     placeholder="Ej: Juan Pérez" aria-describedby="error-nombre" required>
+              <small id="error-nombre" class="mensaje-error"></small>
+            </div>
 
-            <label for="correo">Correo</label>
-            <input type="email" id="correo" name="correo" autocomplete="email" placeholder="ejemplo@correo.cl" required>
-            <p class="error" id="error-correo" aria-live="polite"></p>
+            <div class="campo-formulario">
+              <label for="correo">Correo</label>
+              <input id="correo" name="correo" type="email" autocomplete="email"
+                     placeholder="ejemplo@correo.cl" aria-describedby="error-correo" required>
+              <small id="error-correo" class="mensaje-error"></small>
+            </div>
 
-            <label for="comentario">Comentario</label>
-            <textarea id="comentario" name="comentario" rows="5" placeholder="Cuéntanos en qué podemos ayudarte" required></textarea>
-            <p class="error" id="error-comentario" aria-live="polite"></p>
+            <div class="campo-formulario">
+              <label for="comentario">Comentario</label>
+              <textarea id="comentario" name="comentario" rows="5" maxlength="500"
+                        placeholder="Cuéntanos en qué podemos ayudarte" aria-describedby="error-comentario" required></textarea>
+              <small id="error-comentario" class="mensaje-error"></small>
+            </div>
 
             <button type="submit">Enviar</button>
-            <p class="mensaje-exito" id="mensaje-exito" role="status"></p>
+            <p id="mensaje-exito" role="status"></p>
           </fieldset>
         </form>
       </div>
@@ -73,5 +89,6 @@
     <p><small>Proyecto académico · Desarrollo FullStack II</small></p>
   </footer>
   <script src="assets/js/app.js"></script>
+  <script src="assets/js/contacto.js"></script>
 </body>
 </html>

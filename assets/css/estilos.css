@@ -69,7 +69,7 @@ section + section {
 
 /* 4. Navegación */
 
-/* INDEX | Barra de contacto (Arreglar) */
+/* INDEX | Barra de contacto */
 .barra-contacto {
   padding: 0.4rem max(1rem, calc((100% - var(--ancho-contenido)) / 2));
   color: #ffffff;
@@ -137,6 +137,62 @@ section + section {
 .menu a:hover,
 .menu a[aria-current="page"] {
   background: var(--color-primario);
+}
+
+/* menú hamburguesa */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.cabecera-fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.boton-menu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #ffffff;
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+@media (min-width: 48rem) {
+  .boton-menu {
+    display: none;
+  }
+}
+
+/* El menú empieza cerrado en celular;
+.menu-abierta lo muestra desde el JS */
+.menu {
+  display: none;
+}
+
+.menu.menu-abierta {
+  display: flex;
+}
+
+@media (min-width: 48rem) {
+  .menu {
+    display: flex;
+  }
 }
 
 /* 5. Componentes */
@@ -467,6 +523,34 @@ textarea:focus {
   border: 0;
   border-radius: var(--radio);
 }
+
+/* Mensajes de error contextualizados por campo */
+.campo-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.mensaje-error {
+  display: block;
+  min-height: 1.25rem;
+  color: #b42318;
+  font-size: 0.85rem;
+}
+
+.campo-invalido {
+  border: 0.15rem solid #b42318;
+}
+
+.campo-invalido:focus {
+  outline: 0.2rem solid #f4a6a0;
+}
+
+#mensaje-exito:not(:empty) {
+  margin-top: 0.75rem;
+  color: #1b8a5a;
+  font-weight: 700;
+}
 /* - - - - - - - */
 
 /* SERVICIOS | Principal */
@@ -576,11 +660,11 @@ textarea:focus {
 
 .cuenta-formulario .formulario {
   max-width: none;
-  gap: 0.6rem; /* ✅ NUEVO: antes heredaba el gap:1rem por defecto, quedaba muy alargado */
+  gap: 0.6rem; 
 }
 
 .cuenta-formulario .error {
-  margin: 0 0 0.25rem; /* ✅ NUEVO: menos espacio reservado por campo (antes min-height:1.1rem) */
+  margin: 0 0 0.25rem;
   min-height: 0.9rem;
   font-size: 0.8rem;
 }
@@ -610,7 +694,7 @@ textarea:focus {
 }
 
 .cuenta-imagen img {
-  width: min(100%, 22rem); /* ✅ NUEVO: cuadrada, ya no estira a todo el alto */
+  width: min(100%, 22rem);
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: var(--radio);

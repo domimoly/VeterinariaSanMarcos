@@ -13,9 +13,15 @@
     <p> Av. San Marcos 123, Rancagua | +56 9 1234 5678 | Urgencias 24 hrs · 365 días</p>
   </div>
   <header class="cabecera-sitio">
-    <a class="marca" href="index.html">Veterinaria San Marcos</a>
+        <div class="cabecera-fila">
+      <a class="marca" href="index.html">Veterinaria San Marcos</a>
+      <button type="button" class="boton-menu" id="boton-menu" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Abrir menú</span>
+        <span aria-hidden="true">☰</span>
+      </button>
+    </div>
     <nav aria-label="Navegación principal">
-      <ul class="menu">
+      <ul class="menu" id="menu-principal">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="servicios.html" aria-current="page">Servicios</a></li>
@@ -51,9 +57,9 @@
         <li class="tarjeta-servicio">
           <img src="https://placehold.co/48x48" alt="">
           <h3>Consulta General</h3>
-          <p>Evaluación médica integral para <strong>Perros, Gatos, Aves y Conejos</strong>. Revisión completa del estado de salud de tu mascota.</p>
+          <p>Evaluación médica integral para <strong>Perros y Gatos</strong>. Revisión completa del estado de salud de tu mascota.</p>
           <p><small>Duración aprox: 30 min</small></p>
-          <p class="tarjeta-servicio-precio">Valor: $15.000 - $18.000</p>
+          <p class="tarjeta-servicio-precio">Valor: $15.000</p>
           <a href="#">Conoce más -></a>
         </li>
         <li class="tarjeta-servicio">
@@ -128,8 +134,9 @@
         
         <li class="tarjeta-servicio">
           <img src="https://placehold.co/48x48" alt="Ícono esterilización perro">
-          <h3>Esterilización Hembra Canina</h3>
-          <p>Procedimiento quirúrgico para <strong>Perras</strong>. <br><em>* Incluye anestesia y hospitalización 24h.</em></p>
+          <h3>Esterilización Canina/o</h3>
+          <p>Procedimiento quirúrgico para <strong>Caninos</strong>.
+            <br><em>* Hembras: Incluye anestesia y hospitalización 24h.</em></p>
           <p><small>Duración aprox: 90 min</small></p>
           <p class="tarjeta-servicio-precio">Valor: $80.000</p>
           <a href="agendar-cita.html" class="btn-agendar">Agendar cita →</a>
@@ -336,9 +343,10 @@
 
   <footer class="pie-sitio">
     <p><strong>Veterinaria San Marcos</strong></p>
-    <address>Contacto: <a href="mailto:hola@vetsanmarcos.cl">hola@vetsanmarcos.cl</a></address>
+    <address>Contacto: <a href="mailto:contacto@veterinariasanmarcos.cl">contacto@veterinariasanmarcos.cl</a> |<a href="contacto.html" aria-current="page">Contáctanos</a></address>
     <p><small>Proyecto académico · Desarrollo FullStack II</small></p>
   </footer>
   <script src="assets/js/app.js"></script>
+  <script src="assets/js/contacto.js"></script>
 </body>
 </html>
