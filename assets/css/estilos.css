@@ -964,3 +964,13 @@ textarea:focus {
   color: var(--color-texto-suave);
   font-size: 0.9rem;
 }
+
+.tarjeta-blog-meta i.icono-autor {
+  font-size: 2.2rem;
+  color: var(--color-secundario);
+}
+
+.caja-autor i.icono-autor {
+  font-size: 3.5rem;
+  color: var(--color-secundario);
+}
