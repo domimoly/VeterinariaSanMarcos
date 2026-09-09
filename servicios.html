@@ -3,25 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Talleres y actividades de Conecta Cultura">
-  <title>Inicio | Veterinaria San Marcos</title>
+  <meta name="description" content="Conoce nuestros servicios veterinarios: consultas y vacunas para tu mascota.">
+  <title>Servicios | Veterinaria San Marcos</title>
   <link rel="stylesheet" href="assets/css/estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
   <div class="barra-contacto">
-    <p> Av. San Marcos 123, Santiago | +56 9 1234 5678 | Urgencias 24 hrs · 365 días</p>
+    <p> Av. San Marcos 123, Rancagua | +56 9 1234 5678 | Urgencias 24 hrs · 365 días</p>
   </div>
   <header class="cabecera-sitio">
-    <a class="marca" href="index.html">Veterinaria San Marcos</a>
+        <div class="cabecera-fila">
+      <a class="marca" href="index.html">Veterinaria San Marcos</a>
+      <button type="button" class="boton-menu" id="boton-menu" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Abrir menú</span>
+        <span aria-hidden="true">☰</span>
+      </button>
+    </div>
     <nav aria-label="Navegación principal">
-      <ul class="menu">
+      <ul class="menu" id="menu-principal">
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li> 
+        <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="servicios.html" aria-current="page">Servicios</a></li>
-        <li><a href="tienda.html">Tienda</a></li> 
-        <li><a href="carrito.html">Carrito</a></li> 
-        <li><a href="mi-perfil.html">Mi Perfil</a></li> 
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+        <li><a href="login.html">Mi Perfil</a></li>
       </ul>
     </nav>
   </header>
@@ -30,32 +37,351 @@
     <section class="presentacion">
       <div class="presentacion-contenido">
         <header class="encabezado-pagina">
-          <h1>Tu mascota sana y más feliz con un veterinario en casa</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus volutpat volutpat.
-              Donec eros erat, porta sollicitudin sollicitudin vel, venenatis maximus mauris.</p>
+          <h1>Nuestros Servicios Médicos</h1>
+          <p>En Veterinaria San Marcos contamos con un equipo de 3 médicos veterinarios y 1 técnico dedicados a brindar la mejor atención para tus perros, gatos, aves y conejos.
+            Nuestro objetivo es garantizar la salud y bienestar de tus mascotas mediante un servicio integral y profesional.</p>
+          <ul class="lista-caracteristicas">
+            <li><span class="icono-check" aria-hidden="true">✓</span> Médicos veterinarios colegiados</li>
+            <li><span class="icono-check" aria-hidden="true">✓</span> Instalaciones seguras y equipadas</li>
+            <li><span class="icono-check" aria-hidden="true">✓</span> Sistema de agendamiento online rápido</li>
+          </ul>
         </header>
       </div>
       <div class="presentacion-imagen">
-        <img src="https://placehold.co/600x600" alt="Veterinario atendiendo a una mascota en su hogar">
+        <img src="assets/img/servicios-header.png" alt="Veterinario atendiendo a una mascota">
       </div>
     </section>
+    <hr class="divisor-seccion" aria-hidden="true">
 
-    <section aria-label="Servicios destacados">
-      <ul class="tira-servicios">
-        <li class="servicio-item"><a href="servicios.html">Servicio 1</a></li>
-        <li class="servicio-item"><a href="servicios.html">Servicio 2</a></li>
-        <li class="servicio-item"><a href="servicios.html">Servicio 3</a></li>
-        <li class="servicio-item"><a href="servicios.html">Servicio 4</a></li>
-        <li class="servicio-item"><a href="servicios.html">Servicio 5</a></li>
-        <li class="servicio-item"><a href="servicios.html">Servicio 6</a></li>
+    <section aria-labelledby="titulo-consultas">
+<section aria-labelledby="titulo-consultas">
+      <h2 id="titulo-consultas" class="titulo-centrado">Consultas</h2>
+      <ul class="grilla-servicios">
+        <li class="tarjeta-servicio">
+          <!-- Ícono de estetoscopio -->
+          <i class="fa-solid fa-stethoscope" aria-hidden="true"></i>
+          <h3>Consulta General</h3>
+          <p>Evaluación médica integral para <strong>Perros y Gatos</strong>. Revisión completa del estado de salud de tu mascota.</p>
+          <p><small>Duración aprox: 30 min</small></p>
+          <p class="tarjeta-servicio-precio">Valor: $15.000</p>
+          <a href="detalle-servicios-consultas.html" class="btn-detalle">Conoce más →</a>
+        </li>
+        <li class="tarjeta-servicio">
+          <!-- Ícono de ambulancia/urgencia -->
+          <i class="fa-solid fa-truck-medical" aria-hidden="true"></i>
+          <h3>Consulta Urgencia</h3>
+          <p>Atención prioritaria y estabilización para <strong>Perros y Gatos</strong> en situación crítica. <br><em>* Fuera de horario aplica recargo de +$10.000.</em></p>
+          <p><small>Duración aprox: 30 min</small></p>
+          <p class="tarjeta-servicio-precio">Valor: $25.000</p>
+          <a href="detalle-servicios-consultas.html" class="btn-detalle">Conoce más →</a>
+        </li>
+        <li class="tarjeta-servicio">
+          <!-- Ícono de doctor -->
+          <i class="fa-solid fa-user-doctor" aria-hidden="true"></i>
+          <h3>Segunda Opinión Médica</h3>
+          <p>Revisión detallada de casos clínicos complejos. Válido para <strong>todas las especies</strong>. <br><em>* Requiere traer ficha clínica previa.</em></p>
+          <p><small>Duración aprox: 40 min</small></p>
+          <p class="tarjeta-servicio-precio">Valor: $20.000</p>
+          <a href="detalle-servicios-consultas.html" class="btn-detalle">Conoce más →</a>
+        </li>
+        <li class="tarjeta-servicio">
+          <!-- Ícono de patita -->
+          <i class="fa-solid fa-paw" aria-hidden="true"></i>
+          <h3>Consulta Ave/Conejo</h3>
+          <p>Atención especializada enfocada en el cuidado y tratamiento exclusivo de <strong>aves y conejos</strong> domésticos.</p>
+          <p><small>Duración aprox: 30 min</small></p>
+          <p class="tarjeta-servicio-precio">Valor: $18.000</p>
+          <a href="detalle-servicios-consultas.html" class="btn-detalle">Conoce más →</a>
+        </li>
+      </ul>
+    </section>
+    <hr class="divisor-seccion" aria-hidden="true">
+
+    <section aria-labelledby="titulo-vacunas">
+      <h2 id="titulo-vacunas" class="titulo-centrado">Plan de Vacunación</h2>
+      <ul class="grilla-servicios">
+        <li class="tarjeta-servicio">
+          <!-- Ícono de jeringa para todas las vacunas -->
+          <i class="fa-solid fa-syringe" aria-hidden="true"></i>
+          <h3>Vacuna Séxtuple Canina</h3>
+          <p>Inmunización para <strong>Perros</strong> contra las principales enfermedades infecciosas. <br><em>* Requiere refuerzo anual.</em></p>
+          <p><small>Duración aprox: 10 min</small></p>
+          <p class="tarjeta-servicio-precio">Valor: $18.000</p>
+          <a href="detalle-servicios-vacunas.html" class="btn-detalle">Conoce más →</a>
+        </li>
+        <li class="tarjeta-servicio">
+          <i class="fa-solid fa-syringe" aria-hidden="true"></i>
+          <h3>Vacuna Antirrábica Canina</h3>
+          <p>Aplicación de vacuna contra la rabia para <strong>Perros</strong>. <br><em>* Vacunación obligatoria por ley.</em></p>
+          <p><small>Duración aprox: 10 min</small></p>
+          <p class="tarjeta-servicio-precio">Valor: $12.000</p>
+          <a href="detalle-servicios-vacunas.html" class="btn-detalle">Conoce más →</a>
+        </li>
+        <li class="tarjeta-servicio">
+          <i class="fa-solid fa-syringe" aria-hidden="true"></i>
+          <h3>Vacuna Triple Felina</h3>
+          <p>Protección esencial para <strong>Gatos</strong> contra rinotraqueítis, calicivirosis y panleucopenia. <br><em>* Requiere refuerzo anual.</em></p>
+          <p><small>Duración aprox: 10 min</small></p>
+          <p class="tarjeta-servicio-precio">Valor: $17.000</p>
+          <a href="detalle-servicios-vacunas.html" class="btn-detalle">Conoce más →</a>
+        </li>
+        <li class="tarjeta-servicio">
+          <i class="fa-solid fa-syringe" aria-hidden="true"></i>
+          <h3>Vacuna Bordetella Canina</h3>
+          <p>Inmunización preventiva para <strong>Perros</strong>. Altamente recomendada para evitar la enfermedad conocida como "Tos de las perreras".</p>
+          <p><small>Duración aprox: 10 min</small></p>
+          <p class="tarjeta-servicio-precio">Valor: $14.000</p>
+          <a href="detalle-servicios-vacunas.html" class="btn-detalle">Conoce más →</a>
+        </li>
+      </ul>
+    </section>
+    <hr class="divisor-seccion" aria-hidden="true">
+
+<!-- SECCIÓN CIRUGÍAS -->
+    <section aria-labelledby="titulo-cirugias">
+      <h2 id="titulo-cirugias" class="titulo-centrado">Cirugías</h2>
+      <ul class="grilla-servicios">
+        
+        <li class="tarjeta-servicio">
+          <i class="fa-solid fa-kit-medical" aria-hidden="true"></i>
+          <h3>Esterilización Canina</h3>
+          <p>Procedimiento quirúrgico para <strong>Caninas</strong>.
+            <br><em>* Hembras: Incluye anestesia y hospitalización 24h.</em></p>
+          <p><small>Duración aprox: 90 min</small></p>
+          <p class="tarjeta-servicio-precio">Valor: $80.000</p>
+          <a href="detalle-servicios-cirugias.html" class="btn-detalle">Conoce más →</a>
+        </li>
+
+        <li class="tarjeta-servicio">
+          <i class="fa-solid fa-scissors" aria-hidden="true"></i>
+          <h3>Esterilización Macho Canino</h3>
+          <p>Procedimiento quirúrgico para <strong>Perros</strong>. <br><em>* Incluye anestesia.</em></p>
+          <p><small>Duración aprox: 60 min</small></p>
+          <p class="tarjeta-servicio-precio">Valor: $60.000</p>
+          <a href="detalle-servicios-cirugias.html" class="btn-detalle">Conoce más →</a>
+        </li>
+
+        <li class="tarjeta-servicio">
+          <i class="fa-solid fa-kit-medical" aria-hidden="true"></i>
+          <h3>Esterilización Hembra Felina</h3>
+          <p>Procedimiento quirúrgico para <strong>Gatas</strong>. <br><em>* Incluye anestesia y hospitalización 12h.</em></p>
+          <p><small>Duración aprox: 60 min</small></p>
+          <p class="tarjeta-servicio-precio">Valor: $65.000</p>
+          <a href="detalle-servicios-cirugias.html" class="btn-detalle">Conoce más →</a>
+        </li>
+
+        <li class="tarjeta-servicio">
+          <i class="fa-solid fa-scissors" aria-hidden="true"></i>
+          <h3>Esterilización Macho Felino</h3>
+          <p>Procedimiento quirúrgico para <strong>Gatos</strong>. <br><em>* Incluye anestesia.</em></p>
+          <p><small>Duración aprox: 45 min</small></p>
+          <p class="tarjeta-servicio-precio">Valor: $50.000</p>
+          <a href="detalle-servicios-cirugias.html" class="btn-detalle">Conoce más →</a>
+        </li>
+
+        <li class="tarjeta-servicio">
+          <i class="fa-solid fa-truck-medical" aria-hidden="true"></i>
+          <h3>Extirpación de Tumor Cutáneo</h3>
+          <p>Cirugía oncológica menor para <strong>Perros y Gatos</strong>. <br><em>* Precio referencial; varía según tamaño.</em></p>
+          <p><small>Duración aprox: 60 min</small></p>
+          <p class="tarjeta-servicio-precio">Valor: $120.000</p>
+          <a href="detalle-servicios-cirugias.html" class="btn-detalle">Conoce más →</a>
+        </li>
+
+        <li class="tarjeta-servicio">
+          <i class="fa-solid fa-truck-medical" aria-hidden="true"></i>
+          <h3>Cesárea de Urgencia</h3>
+          <p>Atención obstétrica de emergencia para <strong>Perras y Gatas</strong>.</p>
+          <p><small>Duración aprox: 120 min</small></p>
+          <p class="tarjeta-servicio-precio">Valor: $180.000</p>
+          <a href="detalle-servicios-cirugias.html" class="btn-detalle">Conoce más →</a>
+        </li>
+
+      </ul>
+    </section>
+    <hr class="divisor-seccion" aria-hidden="true">
+
+    <!-- SECCIÓN DESPARASITACIÓN -->
+    <section aria-labelledby="titulo-desparasitacion">
+      <h2 id="titulo-desparasitacion" class="titulo-centrado">Desparasitación</h2>
+      <ul class="grilla-servicios">
+        
+        <li class="tarjeta-servicio">
+          <i class="fa-solid fa-bug-slash" aria-hidden="true"></i>
+          <h3>Interna Pequeños (< 10 kg)</h3>
+          <p>Tratamiento antiparasitario interno para <strong>Perros</strong> de tamaño pequeño.</p>
+          <p><small>Duración aprox: 5 min</small></p>
+          <p class="tarjeta-servicio-precio">Valor: $8.000</p>
+          <a href="detalle-servicios-desparasitacion.html" class="btn-detalle">Conoce más →</a>
+        </li>
+
+        <li class="tarjeta-servicio">
+          <i class="fa-solid fa-bug-slash" aria-hidden="true"></i>
+          <h3>Interna Medianos (10-25 kg)</h3>
+          <p>Tratamiento antiparasitario interno para <strong>Perros</strong> de tamaño mediano.</p>
+          <p><small>Duración aprox: 5 min</small></p>
+          <p class="tarjeta-servicio-precio">Valor: $9.500</p>
+          <a href="detalle-servicios-desparasitacion.html" class="btn-detalle">Conoce más →</a>
+        </li>
+
+        <li class="tarjeta-servicio">
+          <i class="fa-solid fa-bug-slash" aria-hidden="true"></i>
+          <h3>Interna Grandes (> 25 kg)</h3>
+          <p>Tratamiento antiparasitario interno para <strong>Perros</strong> de tamaño grande.</p>
+          <p><small>Duración aprox: 5 min</small></p>
+          <p class="tarjeta-servicio-precio">Valor: $11.000</p>
+          <a href="detalle-servicios-desparasitacion.html" class="btn-detalle">Conoce más →</a>
+        </li>
+
+        <li class="tarjeta-servicio">
+          <i class="fa-solid fa-bug-slash" aria-hidden="true"></i>
+          <h3>Interna Felina</h3>
+          <p>Tratamiento antiparasitario interno específico para <strong>Gatos</strong>.</p>
+          <p><small>Duración aprox: 5 min</small></p>
+          <p class="tarjeta-servicio-precio">Valor: $8.000</p>
+          <a href="detalle-servicios-desparasitacion.html" class="btn-detalle">Conoce más →</a>
+        </li>
+
+        <li class="tarjeta-servicio">
+          <i class="fa-solid fa-bug-slash" aria-hidden="true"></i>
+          <h3>Antiparasitario Externo (Pipeta)</h3>
+          <p>Protección contra pulgas y garrapatas para <strong>Perros y Gatos</strong>. <br><em>* Incluye aplicación en clínica.</em></p>
+          <p><small>Duración aprox: 5 min</small></p>
+          <p class="tarjeta-servicio-precio">Valor: $7.500</p>
+          <a href="detalle-servicios-desparasitacion.html" class="btn-detalle">Conoce más →</a>
+        </li>
+
+      </ul>
+    </section>
+    <hr class="divisor-seccion" aria-hidden="true">
+
+    <!-- SECCIÓN EXÁMENES -->
+    <section aria-labelledby="titulo-examenes">
+      <h2 id="titulo-examenes" class="titulo-centrado">Exámenes y Diagnóstico</h2>
+      <ul class="grilla-servicios">
+        
+        <li class="tarjeta-servicio">
+          <i class="fa-solid fa-vial" aria-hidden="true"></i>
+          <h3>Hemograma Completo</h3>
+          <p>Examen de sangre preventivo y diagnóstico para <strong>Perros y Gatos</strong>. <br><em>* Resultado en 24-48 h.</em></p>
+          <p><small>Duración aprox: 30 min</small></p>
+          <p class="tarjeta-servicio-precio">Valor: $22.000</p>
+          <a href="detalle-servicios-examenes.html" class="btn-detalle">Conoce más →</a>
+        </li>
+
+        <li class="tarjeta-servicio">
+          <i class="fa-solid fa-vial" aria-hidden="true"></i>
+          <h3>Perfil Bioquímico Completo</h3>
+          <p>Evaluación de órganos vitales para <strong>Perros y Gatos</strong>. <br><em>* Resultado en 24-48 h.</em></p>
+          <p><small>Duración aprox: 30 min</small></p>
+          <p class="tarjeta-servicio-precio">Valor: $35.000</p>
+          <a href="detalle-servicios-examenes.html" class="btn-detalle">Conoce más →</a>
+        </li>
+
+        <li class="tarjeta-servicio">
+          <i class="fa-solid fa-x-ray" aria-hidden="true"></i>
+          <h3>Radiografía (1 proyección)</h3>
+          <p>Diagnóstico por imagen para evaluación ósea y torácica en <strong>Perros y Gatos</strong>.</p>
+          <p><small>Duración aprox: 20 min</small></p>
+          <p class="tarjeta-servicio-precio">Valor: $28.000</p>
+          <a href="detalle-servicios-examenes.html" class="btn-detalle">Conoce más →</a>
+        </li>
+
+        <li class="tarjeta-servicio">
+          <i class="fa-solid fa-x-ray" aria-hidden="true"></i>
+          <h3>Ecografía Abdominal</h3>
+          <p>Estudio de imagenología no invasivo para órganos internos en <strong>Perros y Gatos</strong>.</p>
+          <p><small>Duración aprox: 30 min</small></p>
+          <p class="tarjeta-servicio-precio">Valor: $45.000</p>
+          <a href="detalle-servicios-examenes.html" class="btn-detalle">Conoce más →</a>
+        </li>
+
+        <li class="tarjeta-servicio">
+          <i class="fa-solid fa-vial" aria-hidden="true"></i>
+          <h3>Test de Leishmaniasis</h3>
+          <p>Prueba rápida para la detección de esta enfermedad infecciosa en <strong>Perros</strong>.</p>
+          <p><small>Duración aprox: 20 min</small></p>
+          <p class="tarjeta-servicio-precio">Valor: $18.000</p>
+          <a href="detalle-servicios-examenes.html" class="btn-detalle">Conoce más →</a>
+        </li>
+
+      </ul>
+    </section>
+    <hr class="divisor-seccion" aria-hidden="true">
+
+    <!-- SECCIÓN OTROS SERVICIOS -->
+    <section aria-labelledby="titulo-otros">
+      <h2 id="titulo-otros" class="titulo-centrado">Otros Servicios Especiales</h2>
+      <ul class="grilla-servicios">
+        
+        <li class="tarjeta-servicio">
+          <i class="fa-solid fa-scissors" aria-hidden="true"></i>
+          <h3>Corte de Uñas</h3>
+          <p>Servicio rápido y seguro de cuidado básico para <strong>Perros y Gatos</strong>.</p>
+          <p><small>Duración aprox: 15 min</small></p>
+          <p class="tarjeta-servicio-precio">Valor: $5.000</p>
+          <a href="detalle-servicios-otros.html" class="btn-detalle">Conoce más →</a>
+        </li>
+
+        <li class="tarjeta-servicio">
+          <i class="fa-solid fa-tooth" aria-hidden="true"></i>
+          <h3>Limpieza Dental</h3>
+          <p>Destartraje y profilaxis para mantener la salud oral de <strong>Perros y Gatos</strong>. <br><em>* Requiere anestesia.</em></p>
+          <p><small>Duración aprox: 45 min</small></p>
+          <p class="tarjeta-servicio-precio">Valor: $55.000</p>
+          <a href="detalle-servicios-otros.html" class="btn-detalle">Conoce más →</a>
+        </li>
+
+        <li class="tarjeta-servicio">
+          <i class="fa-solid fa-microchip" aria-hidden="true"></i>
+          <h3>Microchip de Identificación</h3>
+          <p>Implantación de dispositivo subcutáneo para <strong>Perros y Gatos</strong>. <br><em>* Incluye registro nacional.</em></p>
+          <p><small>Duración aprox: 10 min</small></p>
+          <p class="tarjeta-servicio-precio">Valor: $15.000</p>
+          <a href="detalle-servicios-otros.html" class="btn-detalle">Conoce más →</a>
+        </li>
+
+        <li class="tarjeta-servicio">
+          <i class="fa-solid fa-bed-pulse" aria-hidden="true"></i>
+          <h3>Hospitalización (por día)</h3>
+          <p>Cuidado intensivo para <strong>Perros y Gatos</strong>. <br><em>* Incluye monitoreo y alimentación básica.</em></p>
+          <p><small>Duración aprox: 24 h</small></p>
+          <p class="tarjeta-servicio-precio">Valor: $30.000</p>
+          <a href="detalle-servicios-otros.html" class="btn-detalle">Conoce más →</a>
+        </li>
+
       </ul>
     </section>
   </main>
-
   <footer class="pie-sitio">
-    <p><strong>Veterinaria San Marcos</strong></p>
-    <address>Contacto: <a href="mailto:hola@vetsanmarcos.cl">hola@vetsanmarcos.cl</a></address>
-    <p><small>Proyecto académico · Desarrollo FullStack II</small></p>
+    <div class="pie-contenedor">
+      <div class="pie-columna">
+        <h3>Veterinaria San Marcos</h3>
+        <p>Cuidando a tu mejor amigo con vocación y tecnología desde 2009. Especialistas en perros, gatos y animales exóticos.</p>
+      </div>
+      
+      <div class="pie-columna">
+        <h3>Contacto y Ubicación</h3>
+        <p>📍 Av. San Marcos 123, Rancagua</p>
+        <p>📞 +56 9 1234 5678</p>
+        <p>✉️ <a href="mailto:contacto@veterinariasanmarcos.cl">contacto@veterinariasanmarcos.cl</a></p>
+        <p>⏰ Urgencias 24 hrs · 365 días</p>
+      </div>
+      
+      <div class="pie-columna">
+        <h3>Enlaces Rápidos</h3>
+        <ul class="pie-enlaces">
+          <li><a href="servicios.html">Nuestros Servicios</a></li>
+          <li><a href="tienda.html">Tienda Online</a></li>
+          <li><a href="blogs.html">Blog Veterinario</a></li>
+          <li><a href="contacto.html">Formulario de Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="pie-creditos">
+      <p><small>© 2026 Veterinaria San Marcos. Proyecto académico · Desarrollo FullStack II.</small></p>
+    </div>
   </footer>
   <script src="assets/js/app.js"></script>
 </body>

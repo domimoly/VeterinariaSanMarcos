@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contáctanos: formulario de contacto y ubicación de Veterinaria San Marcos.">
+  <title>Contacto | Veterinaria San Marcos</title>
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+  <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
+
+  <div class="barra-contacto">
+    <p> Av. San Marcos 123, Rancagua | +56 9 1234 5678 | Urgencias 24 hrs · 365 días</p>
+  </div>
+
+  <header class="cabecera-sitio">
+    <div class="cabecera-fila">
+      <a class="marca" href="index.html">Veterinaria San Marcos</a>
+      <button type="button" class="boton-menu" id="boton-menu" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Abrir menú</span>
+        <span aria-hidden="true">☰</span>
+      </button>
+    </div>
+    <nav aria-label="Navegación principal">
+      <ul class="menu" id="menu-principal">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+        <li><a href="mi-perfil.html">Mi Perfil</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido-principal">
+    <header class="encabezado-contacto">
+      <h1>Contacto</h1>
+      <p>¿Tienes dudas? Contáctanos para resolverlas.</p>
+    </header>
+
+    <section class="contacto" aria-label="Formulario de contacto y ubicación">
+      <div class="contacto-formulario">
+        <h2>Formulario de Contacto</h2>
+        <form class="formulario" id="form-contacto" novalidate>
+          <fieldset>
+            <div class="campo-formulario">
+              <label for="nombre">Nombre</label>
+              <input id="nombre" name="nombre" type="text" maxlength="50" autocomplete="name"
+                     placeholder="Ej: Juan Pérez" aria-describedby="error-nombre" required>
+              <small id="error-nombre" class="mensaje-error"></small>
+            </div>
+
+            <div class="campo-formulario">
+              <label for="correo">Correo</label>
+              <input id="correo" name="correo" type="email" autocomplete="email"
+                     placeholder="ejemplo@correo.cl" aria-describedby="error-correo" required>
+              <small id="error-correo" class="mensaje-error"></small>
+            </div>
+
+            <div class="campo-formulario">
+              <label for="comentario">Comentario</label>
+              <textarea id="comentario" name="comentario" rows="5" maxlength="500"
+                        placeholder="Cuéntanos en qué podemos ayudarte" aria-describedby="error-comentario" required></textarea>
+              <small id="error-comentario" class="mensaje-error"></small>
+            </div>
+
+            <button type="submit">Enviar</button>
+            <p id="mensaje-exito" role="status"></p>
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="contacto-mapa">
+        <iframe
+          title="Ubicación de Veterinaria San Marcos en el mapa"
+          src="https://www.google.com/maps?q=Av.+San+Marcos+123,+Rancagua&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-sitio">
+    <div class="pie-contenedor">
+      <div class="pie-columna">
+        <h3>Veterinaria San Marcos</h3>
+        <p>Cuidando a tu mejor amigo con vocación y tecnología desde 2009. Especialistas en perros, gatos y animales exóticos.</p>
+      </div>
+      
+      <div class="pie-columna">
+        <h3>Contacto y Ubicación</h3>
+        <p>📍 Av. San Marcos 123, Rancagua</p>
+        <p>📞 +56 9 1234 5678</p>
+        <p>✉️ <a href="mailto:contacto@veterinariasanmarcos.cl">contacto@veterinariasanmarcos.cl</a></p>
+        <p>⏰ Urgencias 24 hrs · 365 días</p>
+      </div>
+      
+      <div class="pie-columna">
+        <h3>Enlaces Rápidos</h3>
+        <ul class="pie-enlaces">
+          <li><a href="servicios.html">Nuestros Servicios</a></li>
+          <li><a href="tienda.html">Tienda Online</a></li>
+          <li><a href="blogs.html">Blog Veterinario</a></li>
+          <li><a href="contacto.html">Formulario de Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="pie-creditos">
+      <p><small>© 2026 Veterinaria San Marcos. Proyecto académico · Desarrollo FullStack II.</small></p>
+    </div>
+  </footer>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/contacto.js"></script>
+</body>
+</html>

@@ -1,7 +1,11 @@
-const botonBienvenida = document.querySelector("#boton-bienvenida");
+// app.js | lógica compartida por todas las páginas del sitio
+// menú hamburguesa, está presente en todas las páginas públicas
+const botonMenu = document.querySelector("#boton-menu");
+const menuPrincipal = document.querySelector("#menu-principal");
 
-if (botonBienvenida) {
-  botonBienvenida.addEventListener("click", () => {
-    alert("Veterinaria San Marcos se construye paso a paso.");
+if (botonMenu && menuPrincipal) {
+  botonMenu.addEventListener("click", () => {
+    const abierto = menuPrincipal.classList.toggle("menu-abierta");
+    botonMenu.setAttribute("aria-expanded", String(abierto));
   });
 }
