@@ -1,0 +1,133 @@
+/* =========================================
+   LAYOUT: FORMULARIOS CENTRADOS Y ESTILIZADOS
+   ========================================= */
+
+/* Contenedor central principal */
+.contenedor-auth-centrado {
+    max-width: 800px; /* Ancho máximo para mantener formato de "tarjeta" */
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* Efecto de borde grueso/fondo turquesa imitando la página de contacto */
+.tarjeta-estilo-contacto {
+    background-color: #4eb5c2; /* Color turquesa de la marca */
+    padding: 15px; /* Crea el marco grueso */
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* La caja blanca interior que contiene el formulario */
+.auth-seccion {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 35px 30px;
+    height: 100%;
+}
+
+.auth-seccion h2 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Sistema de cuadrícula para los campos (Mobile First) */
+.grid-2-col {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 sola columna en celulares */
+    gap: 20px 15px;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #444;
+}
+
+.campo input, 
+.campo select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.campo input:focus, 
+.campo select:focus {
+    border-color: #4eb5c2;
+    outline: none;
+}
+
+/* Estilo del botón (oscuro como en el mockup 3) */
+.acciones-form {
+    margin-top: 30px;
+    text-align: center; /* Centra el botón */
+}
+
+.btn-oscuro {
+    background-color: #2c3e50; /* Gris oscuro/Negro */
+    color: #ffffff;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-oscuro:hover {
+    background-color: #1a252f;
+}
+
+/* Enlaces inferiores (Ya tienes cuenta / Olvidaste contraseña) */
+.caja-enlaces {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 0.95rem;
+}
+
+.caja-enlaces a {
+    color: #4eb5c2;
+    text-decoration: none;
+}
+
+.caja-enlaces a:hover {
+    text-decoration: underline;
+}
+
+/* --- Mensajes de Error (Validaciones JS) --- */
+.error-msg {
+    color: #d9534f;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+.input-error {
+    border-color: #d9534f !important;
+    background-color: #fdf4f4;
+}
+
+/* --- PANTALLAS MÁS GRANDES (Tablets y Desktop) --- */
+@media (min-width: 768px) {
+    .grid-2-col {
+        grid-template-columns: 1fr 1fr; /* Pasa a 2 columnas */
+    }
+    
+    /* Clase auxiliar para forzar a un campo a ocupar ambas columnas */
+    .campo-full {
+        grid-column: span 2;
+    }
+}

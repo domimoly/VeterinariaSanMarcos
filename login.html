@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Inicia sesión en tu cuenta de Veterinaria San Marcos">
+  <title>Iniciar Sesión | Veterinaria San Marcos</title>
+  <link rel="stylesheet" href="assets/css/estilos.css">
+  <link rel="stylesheet" href="assets/css/style-login-registro.css">
+</head>
+<body>
+  <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
+  
+  <div class="barra-contacto">
+    <p> Av. San Marcos 123, Rancagua | +56 9 1234 5678 | Urgencias 24 hrs - 365 días</p>
+  </div>
+
+  <header class="cabecera-sitio">
+    <div class="cabecera-fila">
+      <a class="marca" href="index.html">Veterinaria San Marcos</a>
+      <button type="button" class="boton-menu" id="boton-menu" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Abrir menú</span>
+        <span aria-hidden="true">☰</span>
+      </button>
+    </div>
+    <nav aria-label="Navegación principal">
+      <ul class="menu" id="menu-principal">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+        <li><a href="login.html" aria-current="page">Mi Perfil</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenedor centrado sin el cuadro gris -->
+  <main id="contenido-principal" class="contenedor-auth-centrado">
+      <!-- Tarjeta con el estilo de borde de la página de contacto -->
+      <div class="tarjeta-estilo-contacto">
+          <!-- SECCIÓN 1: INICIAR SESIÓN -->
+<section class="auth-seccion" id="seccion-login">
+    <h2 class="titulo-centrado">Iniciar sesión</h2>
+    <form action="#" method="POST" id="form-login" novalidate>
+        <fieldset class="grid-2-col">
+            <div class="campo">
+                <label for="correo-login">Correo</label>
+                <input type="email" id="correo-login" name="correo" required>
+            </div>
+            <div class="campo">
+                <label for="pass-login">Contraseña</label>
+                <input type="password" id="pass-login" name="password" required>
+            </div>
+        </fieldset>
+        <div class="acciones-form">
+            <button type="submit" class="boton btn-oscuro">Iniciar sesión</button>
+        </div>
+    </form>
+    
+    <div class="caja-enlaces">
+        <p>¿No tienes cuenta? <a href="registro.html"><strong>Regístrate</strong></a></p>
+        <!-- Agregamos un ID al enlace de recuperar contraseña -->
+        <p><a href="#" id="link-olvido-pass"><strong>¿Olvidaste tu contraseña?</strong></a></p>
+    </div>
+</section>
+
+<!-- SECCIÓN 2: RECUPERAR CONTRASEÑA (Oculta por defecto) -->
+<section class="auth-seccion" id="seccion-recuperar" style="display: none;">
+    <h2 class="titulo-centrado">Recuperar Cuenta</h2>
+    <p style="text-align: center; font-size: 0.95rem; margin-bottom: 20px; color: #555;">
+        Ingresa tu correo electrónico para su validación. Te enviaremos las instrucciones de recuperación.
+    </p>
+    
+    <form action="#" method="POST" id="form-recuperar" novalidate>
+        <fieldset class="grid-2-col">
+            <div class="campo campo-full">
+                <label for="correo-recuperar">Correo Electrónico</label>
+                <input type="email" id="correo-recuperar" name="correo" placeholder="ejemplo@correo.com" required>
+            </div>
+        </fieldset>
+        
+        <div class="acciones-form" style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
+            <button type="submit" class="boton btn-oscuro">Validar Correo</button>
+            <button type="button" id="btn-volver-login" class="btn-borde" style="padding: 10px 20px; border-radius: 6px; cursor: pointer;">Volver al inicio</button>
+        </div>
+    </form>
+</section>
+      </div>
+  </main>
+
+  <footer class="pie-sitio">
+    <div class="pie-contenedor">
+      <div class="pie-columna">
+        <h3>Veterinaria San Marcos</h3>
+        <p>Cuidando a tu mejor amigo con vocación y tecnología desde 2009. Especialistas en perros, gatos y animales exóticos.</p>
+      </div>
+      
+      <div class="pie-columna">
+        <h3>Contacto y Ubicación</h3>
+        <p>📍 Av. San Marcos 123, Rancagua</p>
+        <p>📞 +56 9 1234 5678</p>
+        <p>✉️ <a href="mailto:contacto@veterinariasanmarcos.cl">contacto@veterinariasanmarcos.cl</a></p>
+        <p>⏰ Urgencias 24 hrs · 365 días</p>
+      </div>
+      
+      <div class="pie-columna">
+        <h3>Enlaces Rápidos</h3>
+        <ul class="pie-enlaces">
+          <li><a href="servicios.html">Nuestros Servicios</a></li>
+          <li><a href="tienda.html">Tienda Online</a></li>
+          <li><a href="blogs.html">Blog Veterinario</a></li>
+          <li><a href="contacto.html">Formulario de Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="pie-creditos">
+      <p><small>© 2026 Veterinaria San Marcos. Proyecto académico · Desarrollo FullStack II.</small></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/validacion-auth.js"></script>
+</body>
+</html>
