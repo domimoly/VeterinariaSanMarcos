@@ -1,0 +1,148 @@
+/* - - VISTA DE CONTACTO Y FORMULARIOS - - */
+
+/* 1. Encabezado de la página */
+.encabezado-contacto {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.encabezado-contacto h1 {
+  margin-bottom: 0.25rem;
+  color: var(--color-secundario);
+}
+
+.encabezado-contacto p {
+  color: var(--color-texto-suave);
+  margin: 0;
+}
+
+/* 2. Estructura principal de contacto (Grid) */
+.contacto {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: var(--color-secundario);
+  border-radius: var(--radio);
+}
+
+@media (min-width: 48rem) {
+  .contacto {
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+  }
+}
+
+/* 3. Estilos del Formulario */
+.contacto-formulario {
+  padding: 1.5rem;
+  background: var(--color-superficie);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.contacto-formulario h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.formulario {
+  display: grid;
+  gap: 1rem;
+}
+
+.formulario fieldset {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.campo-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+  width: 100%;
+  padding: 0.7rem;
+  color: inherit;
+  background: #ffffff;
+  border: 1px solid var(--color-borde);
+  border-radius: 0.4rem;
+  font: inherit;
+}
+
+.formulario input:required,
+.formulario textarea:required {
+  border-left: 0.3rem solid var(--color-primario);
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  border-color: var(--color-primario);
+  outline: none;
+}
+    
+.formulario input:focus-visible,
+.formulario textarea:focus-visible {
+  outline: 3px solid var(--color-acento);
+  outline-offset: 3px;
+}
+
+/* 4. Botón de Enviar (Formulario) */
+.formulario button {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.75rem 1.5rem;
+  color: #ffffff;
+  background: var(--color-primario);
+  border: 0;
+  border-radius: var(--radio);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.formulario button:hover {
+  background: var(--color-primario-oscuro);
+  transform: translateY(-3px);
+}
+
+/* 5. Validaciones y Mensajes de Error (JS) */
+.mensaje-error {
+  display: block;
+  min-height: 1.25rem;
+  color: #b42318;
+  font-size: 0.85rem;
+}
+
+.campo-invalido {
+  border: 0.15rem solid #b42318 !important;
+}
+
+.campo-invalido:focus {
+  outline: 0.2rem solid #f4a6a0 !important;
+}
+
+#mensaje-exito:not(:empty) {
+  margin-top: 0.75rem;
+  color: #1b8a5a;
+  font-weight: 700;
+}
+
+/* 6. Mapa iframe */
+.contacto-mapa iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 20rem;
+  border: 0;
+  border-radius: var(--radio);
+}
