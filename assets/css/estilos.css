@@ -974,3 +974,53 @@ textarea:focus {
   font-size: 3.5rem;
   color: var(--color-secundario);
 }
+
+.grilla-productos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ 
+@media (min-width: 48rem) {
+  .grilla-productos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.producto-imagen {
+  margin-bottom: 0.75rem;
+}
+
+.producto-imagen img {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 0.4rem;
+}
+
+.producto-titulo {
+  margin: 0 0 0.25rem;
+}
+
+.producto-titulo a {
+  color: var(--color-secundario);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.producto-precio {
+  margin: 0 0 0.75rem;
+  font-weight: 700;
+}
+
+.producto-tarjeta {
+  padding: 1rem;
+  text-align: center;
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
