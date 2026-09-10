@@ -1,0 +1,169 @@
+/* - - IENDA Y PRODUCTOS - - */
+
+/* 1. Grilla adaptable de productos */
+.grilla-productos {
+  display: grid;
+  /* Esto crea columnas automáticas que se adaptan al ancho disponible */
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* 2. Tarjeta individual de producto */
+.producto-tarjeta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  transition: transform 0.2s ease;
+  text-align: center;
+}
+
+.producto-tarjeta:hover {
+  transform: translateY(-5px);
+}
+
+/* 3. Contenedor de la imagen */
+.producto-imagen {
+  width: 100%;
+  height: 180px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.producto-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Evita que las cajas de remedios se recorten */
+}
+
+/* 4. Textos de la tarjeta */
+.producto-titulo {
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.producto-titulo a {
+  color: var(--color-texto);
+  text-decoration: none;
+}
+
+.producto-titulo a:hover {
+  color: var(--color-secundario);
+}
+
+.producto-precio {
+  color: var(--color-primario-oscuro);
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 0 0 1.5rem;
+}
+
+/* 5. Botón de añadir al carrito */
+.boton-tienda {
+  width: 100%;
+  margin-top: auto; /* Empuja el botón siempre al fondo */
+  padding: 0.75rem 1rem;
+  color: #ffffff;
+  background: var(--color-secundario);
+  border: none;
+  border-radius: var(--radio);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.boton-tienda:hover {
+  background-color: var(--color-primario);
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   COMPONENTES GLOBALES (Usados en el Carrito)
+   ========================================= */
+
+.titulo-centrado {
+  text-align: center;
+}
+
+.atencion {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 48rem) {
+  .atencion {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.atencion-imagen img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  object-fit: cover;
+}
+
+.etiqueta {
+  margin-bottom: 0.25rem;
+  color: var(--color-secundario);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tarjeta {
+  padding: 1.5rem;
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  margin-bottom: 1.5rem;
+}
+
+.grilla-tarjetas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 48rem) {
+  .grilla-tarjetas {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.boton,
+button {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.7rem 1rem;
+  color: #ffffff;
+  background: var(--color-primario);
+  border: 0;
+  border-radius: 0.5rem;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton:hover,
+button:hover {
+  background: var(--color-primario-oscuro);
+}
