@@ -52,13 +52,13 @@ La solución completa contempla un backend de **microservicios en Spring Boot** 
 
 | | Característica |
 |---|---|---|
-| **Diseño responsivo** | Interfaz adaptable a móviles (≥360px), tablets (≥768px) y escritorio (≥1280px). 
-| **CSS modular** | Estilos separados por sección (`style`, `servicios`, `blogs`, etc.) para mantener el código ordenado. 
-| **Catálogo de servicios** | Vistas detalladas para Consultas, Cirugías, Vacunas, Exámenes y Desparasitación. 
-| **Blog educativo** | Artículos enfocados en la tenencia responsable de mascotas. 
-| **Formularios estructurados** | Contacto, inicio de sesión, registro y perfil de usuario. 
+| **Diseño responsivo** | Interfaz adaptable a móviles (≥360px), tablets (≥768px) y escritorio (≥1280px). |
+| **CSS modular** | Estilos separados por sección (`style`, `servicios`, `blogs`, etc.) para mantener el código ordenado. |
+| **Catálogo de servicios** | Vistas detalladas para Consultas, Cirugías, Vacunas, Exámenes y Desparasitación. |
+| **Blog educativo** | Artículos enfocados en la tenencia responsable de mascotas. |
+| **Formularios estructurados** | Contacto, inicio de sesión, registro y perfil de usuario. |
 | **Accesibilidad** | HTML5 semántico y atributos ARIA. |
-| **Tienda y carrito** | Módulo e-commerce en desarrollo para venta de productos veterinarios. 
+| **Tienda y carrito** | Módulo e-commerce en desarrollo para venta de productos veterinarios. |
 
 ---
 
