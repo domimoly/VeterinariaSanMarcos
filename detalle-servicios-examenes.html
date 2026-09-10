@@ -5,29 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Detalle de exámenes de laboratorio e imagenología.">
   <title>Detalle Exámenes | Veterinaria San Marcos</title>
-  <link rel="stylesheet" href="assets/css/estilos.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/servicios.css">
 </head>
 <body>
   <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
   <div class="barra-contacto">
     <p> Av. San Marcos 123, Rancagua | +56 9 1234 5678 | Urgencias 24 hrs · 365 días</p>
   </div>
+  
   <header class="cabecera-sitio">
     <div class="cabecera-fila">
-      <a class="marca" href="index.html">Veterinaria San Marcos</a>
+      <a class="marca" href="index.html">
+        <img src="assets/img/logo-veterinaria-header.png" alt="Veterinaria San Marcos" class="logo-movil">
+      </a>
       <button type="button" class="boton-menu" id="boton-menu" aria-expanded="false" aria-controls="menu-principal">
         <span class="sr-only">Abrir menú</span>
         <span aria-hidden="true">☰</span>
       </button>
     </div>
-    <nav aria-label="Navegación principal">
+
+    <nav aria-label="Navegación principal" class="nav-principal">
       <ul class="menu" id="menu-principal">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="servicios.html" aria-current="page">Servicios</a></li>
+        
+        <li class="item-logo-desktop">
+          <a href="index.html" class="enlace-logo-desktop">
+            <img src="assets/img/logo-veterinaria-header.png" alt="Veterinaria San Marcos" class="logo-desktop">
+          </a>
+        </li>
+        
         <li><a href="tienda.html">Tienda</a></li>
         <li><a href="carrito.html">Carrito</a></li>
-        <li><a href="mi-perfil.html">Mi Perfil</a></li>
+        <li><a href="login.html">Login</a></li>
       </ul>
     </nav>
   </header>
@@ -37,7 +49,7 @@
         <h1>Exámenes y Diagnóstico</h1>
     </header> 
     <hr class="divisor-seccion" aria-hidden="true">
-    <!-- DETALLE 1 | Hemograma -->
+    
     <section class="presentacion">
       <div class="presentacion-contenido">
         <h1 class="titulo-detalle">Hemograma Completo <span>Perros y Gatos</span></h1>
@@ -47,7 +59,7 @@
           <li><span class="icono-check" aria-hidden="true">✓</span> Valor: $22.000</li>
           <li><span class="icono-check" aria-hidden="true">✓</span> Resultados disponibles en 24 a 48 hrs</li>
         </ul>
-        <a href="agendar-cita.html" class="boton btn-agendar-detalle">Agendar examen</a>
+        <a href="agendar-cita.html" class="boton-agenda btn-agendar-detalle">Agendar examen</a>
       </div>
       <div class="presentacion-imagen">
         <img src="assets/img/servicios-detalle-examen-01.png" alt="Veterinario revisando muestra de sangre">
@@ -56,7 +68,6 @@
     
     <hr class="divisor-seccion" aria-hidden="true">
 
-    <!-- DETALLE 2 | Perfil Bioquímico -->
     <section class="presentacion">
       <div class="presentacion-contenido">
         <h1 class="titulo-detalle">Perfil Bioquímico Completo <span>Perros y Gatos</span></h1>
@@ -66,7 +77,7 @@
           <li><span class="icono-check" aria-hidden="true">✓</span> Valor: $35.000</li>
           <li><span class="icono-check" aria-hidden="true">✓</span> Resultados disponibles en 24 a 48 hrs</li>
         </ul>
-        <a href="agendar-cita.html" class="boton btn-agendar-detalle">Agendar examen</a>
+        <a href="agendar-cita.html" class="boton-agenda btn-agendar-detalle">Agendar examen</a>
       </div>
       <div class="presentacion-imagen">
         <img src="/assets/img/servicios-detalle-consulta-01.png" alt="Tubos de ensayo en laboratorio veterinario">
@@ -75,7 +86,6 @@
 
     <hr class="divisor-seccion" aria-hidden="true">
 
-    <!-- DETALLE 3 | Radiografía -->
     <section class="presentacion">
       <div class="presentacion-contenido">
         <h1 class="titulo-detalle">Radiografía (1 proyección) <span>Perros y Gatos</span></h1>
@@ -85,7 +95,7 @@
           <li><span class="icono-check" aria-hidden="true">✓</span> Valor: $28.000</li>
           <li><span class="icono-check" aria-hidden="true">✓</span> Equipamiento digital de alta resolución</li>
         </ul>
-        <a href="agendar-cita.html" class="boton btn-agendar-detalle">Agendar examen</a>
+        <a href="agendar-cita.html" class="boton-agenda btn-agendar-detalle">Agendar examen</a>
       </div>
       <div class="presentacion-imagen">
         <img src="/assets/img/servicios-detalle-examen-02.png" alt="Radiografía digital de un animal en pantalla">
@@ -94,7 +104,6 @@
 
     <hr class="divisor-seccion" aria-hidden="true">
 
-    <!-- DETALLE 4 | Ecografía -->
     <section class="presentacion">
       <div class="presentacion-contenido">
         <h1 class="titulo-detalle">Ecografía Abdominal <span>Perros y Gatos</span></h1>
@@ -104,7 +113,7 @@
           <li><span class="icono-check" aria-hidden="true">✓</span> Valor: $45.000</li>
           <li><span class="icono-check" aria-hidden="true">✓</span> Procedimiento seguro y sin dolor</li>
         </ul>
-        <a href="agendar-cita.html" class="boton btn-agendar-detalle">Agendar examen</a>
+        <a href="agendar-cita.html" class="boton-agenda btn-agendar-detalle">Agendar examen</a>
       </div>
       <div class="presentacion-imagen">
         <img src="/assets/img/servicios-detalle-examen-03.png" alt="Veterinario realizando ecografía abdominal a un perro">
@@ -113,7 +122,6 @@
 
     <hr class="divisor-seccion" aria-hidden="true">
 
-    <!-- DETALLE 5 | Test Leishmaniasis -->
     <section class="presentacion">
       <div class="presentacion-contenido">
         <h1 class="titulo-detalle">Test de Leishmaniasis <span>Exclusivo Perros</span></h1>
@@ -123,7 +131,7 @@
           <li><span class="icono-check" aria-hidden="true">✓</span> Valor: $18.000</li>
           <li><span class="icono-check" aria-hidden="true">✓</span> Resultado rápido en la misma clínica</li>
         </ul>
-        <a href="agendar-cita.html" class="boton btn-agendar-detalle">Agendar examen</a>
+        <a href="agendar-cita.html" class="boton-agenda btn-agendar-detalle">Agendar examen</a>
       </div>
       <div class="presentacion-imagen">
         <img src="/assets/img/servicios-detalle-ciguria-05.png" alt="Kit de test rápido veterinario">

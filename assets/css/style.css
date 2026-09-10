@@ -1,0 +1,497 @@
+/* =========================================
+   1. VARIABLES Y BASE
+   ========================================= */
+:root {
+  --color-primario: #343535;
+  --color-primario-oscuro: #1b1b1b;
+  --color-secundario: #49b8c0;
+  --color-acento: #eb7bc0;
+  --color-texto: #183044;
+  --color-texto-suave: #526575;
+  --color-fondo: #f4f7fa;
+  --color-superficie: #ffffff;
+  --color-borde: #c9d4de;
+  --fuente-base: Arial, Helvetica, sans-serif;
+  --radio: 0.75rem;
+  --sombra: 0 0.5rem 1.25rem rgb(20 48 68 / 12%);
+  --ancho-contenido: 72rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--color-texto);
+  background: var(--color-fondo);
+  font-family: var(--fuente-base);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--color-primario);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+/* =========================================
+   2. ESTRUCTURA Y ACCESIBILIDAD
+   ========================================= */
+main {
+  width: min(100% - 2rem, var(--ancho-contenido));
+  margin-inline: auto;
+  padding-block: 2rem 4rem;
+}
+
+section + section {
+  margin-top: 3rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.salto-contenido {
+  position: absolute;
+  padding: 0.6rem 1rem;
+  color: #ffffff;
+  background: var(--color-primario-oscuro);
+  transform: translateY(-150%);
+}
+
+.salto-contenido:focus {
+  transform: translateY(0);
+}
+
+.divisor-seccion {
+  border: none;
+  border-top: 1px solid var(--color-borde);
+  margin: 3rem 0;
+}
+
+/* =========================================
+   3. CABECERA Y NAVEGACIÓN
+   ========================================= */
+.barra-contacto {
+  padding: 0.4rem max(1rem, calc((100% - var(--ancho-contenido)) / 2));
+  color: #ffffff;
+  background: var(--color-secundario);
+  font-size: 0.8rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.barra-contacto p {
+  margin: 0;
+}
+
+.cabecera-sitio {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #ffffff;
+  background: var(--color-primario-oscuro);
+  padding: 0.5rem max(1rem, calc((100% - var(--ancho-contenido)) / 2));
+}
+
+.cabecera-fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.marca {
+  color: #ffffff;
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.logo-movil {
+  height: 45px;
+  width: auto;
+}
+
+.item-logo-desktop {
+  display: none;
+}
+
+.boton-menu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #ffffff;
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu.menu-abierta {
+  display: flex;
+}
+
+.menu a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.menu a:hover,
+.menu a[aria-current="page"] {
+  background: var(--color-primario);
+}
+
+.menu a.enlace-logo-desktop:hover {
+  background: transparent;
+}
+
+@media (min-width: 48rem) {
+  .boton-menu {
+    display: none;
+  }
+  
+  .cabecera-fila {
+    display: none !important;
+  }
+  
+  .nav-principal {
+    width: 100%;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .item-logo-desktop {
+    display: block;
+    margin: 0 2rem;
+  }
+
+  .logo-desktop {
+    height: 110px;
+    width: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo-desktop:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* =========================================
+   4. INDEX | PRESENTACIÓN PRINCIPAL
+   ========================================= */
+.presentacion {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 48rem) {
+  .presentacion {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.presentacion h1 {
+  font-size: 2rem;
+}
+
+.presentacion-imagen img {
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+/* =========================================
+   5. INDEX | SERVICIOS DESTACADOS (TIRA)
+   ========================================= */
+.tira-servicios {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 48rem) {
+  .tira-servicios {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.servicio-item {
+  padding: 1rem;
+  text-align: center;
+  background: var(--color-secundario);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  transition: transform 0.2s ease;
+}
+
+.servicio-item a {
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  display: block;
+}
+
+.servicio-item:hover {
+  transform: translateY(-3px);
+  background: var(--color-primario);
+}
+
+/* =========================================
+   6. INDEX | ATENCIÓN Y RESEÑAS
+   ========================================= */
+.titulo-centrado {
+  text-align: center;
+}
+
+.atencion {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 48rem) {
+  .atencion {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.atencion-imagen img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  object-fit: cover;
+}
+
+.lista-resenas {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.resena {
+  padding: 1rem;
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.resena-encabezado {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.resena-autor {
+  font-weight: 700;
+}
+
+.resena-estrellas {
+  color: var(--color-acento);
+  letter-spacing: 0.15rem;
+}
+
+.resena p {
+  margin: 0;
+  color: var(--color-texto-suave);
+  font-size: 0.9rem;
+}
+
+/* =========================================
+   7. INDEX | AGENDAR CITA Y CONTACTO
+   ========================================= */
+.agenda {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 48rem) {
+  .agenda {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.agenda-contenido h1 {
+  margin-top: 0;
+  color: var(--color-primario-oscuro);
+}
+
+.boton-agenda {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  color: #ffffff;
+  background: var(--color-secundario);
+  border-radius: var(--radio);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.boton-agenda:hover {
+  transform: translateY(-3px);
+  background-color: var(--color-primario);
+}
+
+.agenda-imagen img {
+  width: 100%;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+/* =========================================
+   8. INDEX | VIDEO RESPONSIVO YOUTUBE
+   ========================================= */
+.seccion-video {
+  max-width: 55rem;
+  width: 100%;
+  margin: 3rem auto;
+}
+
+.contenedor-video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin-top: 2rem;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.contenedor-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* =========================================
+   9. PIE DE PÁGINA (FOOTER)
+   ========================================= */
+.pie-sitio {
+  padding: 3rem max(1rem, calc((100% - var(--ancho-contenido)) / 2)) 1rem;
+  background: var(--color-primario-oscuro);
+  color: #c9d4de;
+  font-size: 0.95rem;
+}
+
+.pie-contenedor {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+@media (min-width: 48rem) {
+  .pie-contenedor {
+    grid-template-columns: repeat(3, 1fr);
+    text-align: left;
+  }
+}
+
+.pie-columna h3 {
+  color: var(--color-secundario);
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.pie-columna p {
+  margin: 0.5rem 0;
+}
+
+.pie-enlaces {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pie-sitio a {
+  color: var(--color-secundario);
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.pie-sitio a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.pie-creditos {
+  text-align: center;
+  border-top: 1px solid var(--color-primario);
+  padding-top: 1.5rem;
+}

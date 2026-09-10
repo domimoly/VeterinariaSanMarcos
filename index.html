@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Talleres y actividades de Conecta Cultura">
   <title>Inicio | Veterinaria San Marcos</title>
-  <link rel="stylesheet" href="assets/css/estilos.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
@@ -13,18 +13,31 @@
     <p> Av. San Marcos 123, Rancagua | +56 9 1234 5678 | Urgencias 24 hrs · 365 días</p>
   </div>
   <header class="cabecera-sitio">
+    <!-- Fila móvil | Solo se verá en celulares -->
     <div class="cabecera-fila">
-      <a class="marca" href="index.html">Veterinaria San Marcos</a>
+      <a class="marca" href="index.html">
+        <img src="assets/img/logo-veterinaria-header.png" alt="Veterinaria San Marcos" class="logo-movil">
+      </a>
       <button type="button" class="boton-menu" id="boton-menu" aria-expanded="false" aria-controls="menu-principal">
         <span class="sr-only">Abrir menú</span>
         <span aria-hidden="true">☰</span>
       </button>
     </div>
-    <nav aria-label="Navegación principal">
+
+    <!-- Navegación principal -->
+    <nav aria-label="Navegación principal" class="nav-principal">
       <ul class="menu" id="menu-principal">
         <li><a href="index.html" aria-current="page">Inicio</a></li>
         <li><a href="nosotros.html">Nosotros</a></li> 
         <li><a href="servicios.html">Servicios</a></li>
+        
+        <!-- LOGO ESCRITORIO | Solo se ve al medio en pc -->
+        <li class="item-logo-desktop">
+          <a href="index.html" class="enlace-logo-desktop">
+            <img src="assets/img/logo-veterinaria-header.png" alt="Veterinaria San Marcos" class="logo-desktop">
+          </a>
+        </li>
+        
         <li><a href="tienda.html">Tienda</a></li> 
         <li><a href="carrito.html">Carrito</a></li> 
         <li><a href="login.html">Mi Perfil</a></li> 
@@ -113,6 +126,20 @@
       <div class="agenda-imagen">
         <img src="assets/img/index-imagen-agenda.png" alt="">
       </div>
+    </section>
+
+<hr class="divisor-seccion" aria-hidden="true">
+    
+    <section class="seccion-video" aria-labelledby="titulo-video">
+      <h2 id="titulo-video" class="titulo-centrado">La importancia de los cuidados de tu mascota</h2>
+      <p class="titulo-centrado">Adoptar es un compromiso de por vida. En Veterinaria San Marcos te acompañamos en cada etapa para garantizar que tu mejor amigo reciba el cuidado, el cariño y la atención médica que merece, porque ellos confían en ti.</p>
+      
+      <div class="contenedor-video">
+        <iframe 
+          src="https://www.youtube.com/embed/L1FXKsLUVb8" title="Video sobre el cuidado de mascotas">
+        </iframe>
+      </div>
+      
     </section>
   </main>
 
