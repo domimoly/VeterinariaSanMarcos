@@ -50,7 +50,7 @@ La solución completa contempla un backend de **microservicios en Spring Boot** 
 
 ## Características principales
 
-| | Característica |
+| | Característica | Descripción |
 |---|---|---|
 | **Diseño responsivo** | Interfaz adaptable a móviles (≥360px), tablets (≥768px) y escritorio (≥1280px). |
 | **CSS modular** | Estilos separados por sección (`style`, `servicios`, `blogs`, etc.) para mantener el código ordenado. |
