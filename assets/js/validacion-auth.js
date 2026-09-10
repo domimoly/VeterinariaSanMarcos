@@ -64,11 +64,39 @@ document.addEventListener('DOMContentLoaded', () => {
         correoLogin.addEventListener('input', () => validarCorreo(correoLogin));
         passLogin.addEventListener('input', () => validarPassword(passLogin));
 
+        // --- VALIDACIÓN Y REDIRECCIÓN AL ENVIAR ---
         formLogin.addEventListener('submit', (e) => {
+            e.preventDefault(); // Evita que la página se recargue automáticamente
+
             const isCorreoValid = validarCorreo(correoLogin);
             const isPassValid = validarPassword(passLogin);
+            
+            // Si hay errores de formato, detenemos el proceso y mostramos las sugerencias
             if (!isCorreoValid || !isPassValid) {
-                e.preventDefault(); // Previene envío si hay errores
+                return; 
+            }
+
+            // SIMULACIÓN DE ROLES Y AUTENTICACIÓN
+            const emailIngresado = correoLogin.value.trim().toLowerCase();
+            const passIngresada = passLogin.value;
+
+            // 1. Caso Administrador (Acceso total al sistema)
+            if (emailIngresado === 'admin@duoc.cl' && passIngresada === 'admin123') {
+                alert('Bienvenido Administrador. Redirigiendo al panel de control...');
+                // Simulamos guardar un token/rol de sesión
+                localStorage.setItem('usuarioRol', 'Administrador'); 
+                // Redirigimos al Home del Administrador
+                window.location.href = 'admin-home.html';
+            } 
+            // 2. Caso Cliente Normal (Dueño de mascota)
+            else if (emailIngresado === 'cliente@gmail.com' && passIngresada === '1234') {
+                alert('Inicio de sesión exitoso. Bienvenido a Veterinaria San Marcos.');
+                localStorage.setItem('usuarioRol', 'Cliente');
+                window.location.href = 'index.html';
+            } 
+            // 3. Credenciales incorrectas
+            else {
+                mostrarError(passLogin, 'Correo o contraseña incorrectos.');
             }
         });
 

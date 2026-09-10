@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Panel de Administración de Veterinaria San Marcos">
+  <title>Panel Administrador | Veterinaria San Marcos</title>
+  <!-- Reutilizamos variables y tipografías globales -->
+  <link rel="stylesheet" href="assets/css/estilos.css">
+  <!-- Estilos exclusivos del panel de administración -->
+  <link rel="stylesheet" href="assets/css/style-admin.css">
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="admin-layout">
+    
+    <!-- BARRA LATERAL (Menú Vertical Obligatorio) -->
+    <aside class="admin-sidebar" id="admin-sidebar">
+      <div class="admin-logo">
+        <i class="fa-solid fa-paw"></i>
+        <h2>San Marcos Admin</h2>
+      </div>
+      <nav class="admin-nav" aria-label="Navegación del Administrador">
+        <ul>
+          <li><a href="admin-home.html" class="activo"><i class="fa-solid fa-chart-pie"></i> Dashboard</a></li>
+          <!-- Enlaces a los mantenedores requeridos -->
+          <li><a href="admin-productos.html"><i class="fa-solid fa-box"></i> Productos</a></li>
+          <li><a href="admin-usuarios.html"><i class="fa-solid fa-users"></i> Usuarios</a></li>
+          <!-- Opciones extra simulando un panel real -->
+          <li><a href="#"><i class="fa-solid fa-file-invoice"></i> Reportes</a></li>
+          <li><a href="#"><i class="fa-solid fa-gear"></i> Configuración</a></li>
+          <li class="nav-logout"><a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- ÁREA CENTRAL DE CONTENIDO -->
+    <main class="admin-main">
+      
+      <!-- Cabecera superior del administrador -->
+      <header class="admin-header">
+        <button type="button" class="btn-menu-admin" id="btn-menu-admin" aria-label="Abrir menú lateral">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <h1>¡HOLA Administrador!</h1>
+        <div class="admin-perfil">
+           <i class="fa-solid fa-bell"></i>
+           <div class="avatar-admin">A</div>
+        </div>
+      </header>
+      
+      <!-- Contenido del Home -->
+      <section class="admin-contenido">
+         
+         <div class="tarjeta-admin panel-bienvenida">
+           <h3>Bienvenido al Panel de Control</h3>
+           <p>Selecciona una opción en el menú vertical para comenzar a gestionar los mantenedores de productos o usuarios del sistema.</p>
+         </div>
+         
+         <!-- Resumen (Dashboard) -->
+         <div class="grid-dashboard">
+            <div class="tarjeta-stat">
+               <div class="stat-icono"><i class="fa-solid fa-users"></i></div>
+               <div class="stat-info">
+                   <h4>Usuarios Registrados</h4>
+                   <p class="stat-numero">1,024</p>
+               </div>
+            </div>
+            <div class="tarjeta-stat">
+               <div class="stat-icono"><i class="fa-solid fa-box"></i></div>
+               <div class="stat-info">
+                   <h4>Productos Activos</h4>
+                   <p class="stat-numero">356</p>
+               </div>
+            </div>
+            <div class="tarjeta-stat">
+               <div class="stat-icono"><i class="fa-solid fa-cart-shopping"></i></div>
+               <div class="stat-info">
+                   <h4>Ventas del Mes</h4>
+                   <p class="stat-numero">128</p>
+               </div>
+            </div>
+         </div>
+
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>
