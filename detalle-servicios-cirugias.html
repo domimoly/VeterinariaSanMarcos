@@ -5,37 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Detalle de cirugías y esterilizaciones en San Marcos.">
   <title>Detalle Cirugías | Veterinaria San Marcos</title>
-  <link rel="stylesheet" href="assets/css/estilos.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/servicios.css">
 </head>
 <body>
   <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
   <div class="barra-contacto">
     <p> Av. San Marcos 123, Rancagua | +56 9 1234 5678 | Urgencias 24 hrs · 365 días</p>
   </div>
+  
   <header class="cabecera-sitio">
     <div class="cabecera-fila">
-      <a class="marca" href="index.html">Veterinaria San Marcos</a>
+      <a class="marca" href="index.html">
+        <img src="assets/img/logo-veterinaria-header.png" alt="Veterinaria San Marcos" class="logo-movil">
+      </a>
       <button type="button" class="boton-menu" id="boton-menu" aria-expanded="false" aria-controls="menu-principal">
         <span class="sr-only">Abrir menú</span>
         <span aria-hidden="true">☰</span>
       </button>
     </div>
-    <nav aria-label="Navegación principal">
+
+    <nav aria-label="Navegación principal" class="nav-principal">
       <ul class="menu" id="menu-principal">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="servicios.html" aria-current="page">Servicios</a></li>
+        
+        <li class="item-logo-desktop">
+          <a href="index.html" class="enlace-logo-desktop">
+            <img src="assets/img/logo-veterinaria-header.png" alt="Veterinaria San Marcos" class="logo-desktop">
+          </a>
+        </li>
+        
         <li><a href="tienda.html">Tienda</a></li>
         <li><a href="carrito.html">Carrito</a></li>
-        <li><a href="mi-perfil.html">Mi Perfil</a></li>
+        <li><a href="login.html">Login</a></li> 
       </ul>
     </nav>
   </header>
-<main id="contenido-principal">
-      <header class="encabezado-contacto">
-        <h1>Cirugías</h1>
-      </header> 
-      <hr class="divisor-seccion" aria-hidden="true">
+
+  <main id="contenido-principal">
+    <header class="encabezado-contacto">
+      <h1>Cirugías</h1>
+    </header> 
+    <hr class="divisor-seccion" aria-hidden="true">
+    
     <!-- CIRUGÍA 1: Est. Hembra Canina -->
     <section class="presentacion">
       <div class="presentacion-contenido">
@@ -46,7 +60,7 @@
           <li><span class="icono-check" aria-hidden="true">✓</span> Valor: $80.000</li>
           <li><span class="icono-check" aria-hidden="true">✓</span> Incluye anestesia y hospitalización 24h</li>
         </ul>
-        <a href="agendar-cita.html" class="boton btn-agendar-detalle">Agendar evaluación</a>
+        <a href="agendar-cita.html" class="boton-agenda btn-agendar-detalle">Agendar evaluación</a>
       </div>
       <div class="presentacion-imagen">
         <img src="assets/img/servicios-detalle-ciguria-01.png" alt="Pabellón quirúrgico veterinario">
@@ -64,7 +78,8 @@
           <li><span class="icono-check" aria-hidden="true">✓</span> Valor: $60.000</li>
           <li><span class="icono-check" aria-hidden="true">✓</span> Incluye anestesia segura</li>
         </ul>
-        <a href="agendar-cita.html" class="boton btn-agendar-detalle">Agendar evaluación</a>
+
+        <a href="agendar-cita.html" class="boton-agenda btn-agendar-detalle">Agendar evaluación</a>
       </div>
       <div class="presentacion-imagen">
         <img src="assets/img/servicios-detalle-ciguria-02.png" alt="Monitoreo durante cirugía veterinaria">
@@ -72,7 +87,6 @@
     </section>
     <hr class="divisor-seccion" aria-hidden="true">
 
-    <!-- CIRUGÍA 3: Est. Hembra Felina -->
     <section class="presentacion">
       <div class="presentacion-contenido">
         <h1 class="titulo-detalle">Esterilización Hembra Felina <span>Gatas</span></h1>
@@ -82,7 +96,7 @@
           <li><span class="icono-check" aria-hidden="true">✓</span> Valor: $65.000</li>
           <li><span class="icono-check" aria-hidden="true">✓</span> Incluye anestesia y hospitalización 12h</li>
         </ul>
-        <a href="agendar-cita.html" class="boton btn-agendar-detalle">Agendar evaluación</a>
+        <a href="agendar-cita.html" class="boton-agenda btn-agendar-detalle">Agendar evaluación</a>
       </div>
       <div class="presentacion-imagen">
         <img src="assets/img/servicios-detalle-ciguria-03.png" alt="Gata en recuperación postoperatoria">
@@ -100,7 +114,7 @@
           <li><span class="icono-check" aria-hidden="true">✓</span> Valor: $50.000</li>
           <li><span class="icono-check" aria-hidden="true">✓</span> Incluye anestesia</li>
         </ul>
-        <a href="agendar-cita.html" class="boton btn-agendar-detalle">Agendar evaluación</a>
+        <a href="agendar-cita.html" class="boton-agenda btn-agendar-detalle">Agendar evaluación</a>
       </div>
       <div class="presentacion-imagen">
         <img src="assets/img/servicios-detalle-ciguria-04.png" alt="Instrumental quirúrgico veterinario">
@@ -118,7 +132,7 @@
           <li><span class="icono-check" aria-hidden="true">✓</span> Valor: $120.000 (Precio referencial; varía según tamaño)</li>
           <li><span class="icono-check" aria-hidden="true">✓</span> Incluye estabilización de tejido blando</li>
         </ul>
-        <a href="agendar-cita.html" class="boton btn-agendar-detalle">Agendar evaluación</a>
+        <a href="agendar-cita.html" class="boton-agenda btn-agendar-detalle">Agendar evaluación</a>
       </div>
       <div class="presentacion-imagen">
         <img src="assets/img/servicios-detalle-ciguria-05.png" alt="Veterinario revisando nódulo en la piel">
@@ -136,13 +150,14 @@
           <li><span class="icono-check" aria-hidden="true">✓</span> Valor: $180.000</li>
           <li><span class="icono-check" aria-hidden="true">✓</span> Equipo de urgencias disponible</li>
         </ul>
-        <a href="agendar-cita.html" class="boton btn-agendar-detalle">Agendar urgencia</a>
+        <a href="agendar-cita.html" class="boton-agenda btn-agendar-detalle">Agendar urgencia</a>
       </div>
       <div class="presentacion-imagen">
         <img src="assets/img/servicios-detalle-ciguria-01.png" alt="Recuperación de cachorros tras cesárea">
       </div>
     </section>
   </main>
+  
   <footer class="pie-sitio">
     <div class="pie-contenedor">
       <div class="pie-columna">

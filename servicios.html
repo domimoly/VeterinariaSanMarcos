@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Conoce nuestros servicios veterinarios: consultas y vacunas para tu mascota.">
   <title>Servicios | Veterinaria San Marcos</title>
-  <link rel="stylesheet" href="assets/css/estilos.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/servicios.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -13,26 +14,37 @@
   <div class="barra-contacto">
     <p> Av. San Marcos 123, Rancagua | +56 9 1234 5678 | Urgencias 24 hrs · 365 días</p>
   </div>
-  <header class="cabecera-sitio">
-        <div class="cabecera-fila">
-      <a class="marca" href="index.html">Veterinaria San Marcos</a>
+<header class="cabecera-sitio">
+    <!-- Fila móvil: Solo se verá en celulares -->
+    <div class="cabecera-fila">
+      <a class="marca" href="index.html">
+        <img src="assets/img/logo-veterinaria-header.png" alt="Veterinaria San Marcos" class="logo-movil">
+      </a>
       <button type="button" class="boton-menu" id="boton-menu" aria-expanded="false" aria-controls="menu-principal">
         <span class="sr-only">Abrir menú</span>
         <span aria-hidden="true">☰</span>
       </button>
     </div>
-    <nav aria-label="Navegación principal">
+
+    <!-- Navegación principal -->
+    <nav aria-label="Navegación principal" class="nav-principal">
       <ul class="menu" id="menu-principal">
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li> 
         <li><a href="servicios.html" aria-current="page">Servicios</a></li>
-        <li><a href="tienda.html">Tienda</a></li>
-        <li><a href="carrito.html">Carrito</a></li>
-        <li><a href="login.html">Mi Perfil</a></li>
+        
+        <li class="item-logo-desktop">
+          <a href="index.html" class="enlace-logo-desktop">
+            <img src="assets/img/logo-veterinaria-header.png" alt="Veterinaria San Marcos" class="logo-desktop">
+          </a>
+        </li>
+        
+        <li><a href="tienda.html">Tienda</a></li> 
+        <li><a href="carrito.html">Carrito</a></li> 
+        <li><a href="mi-perfil.html">Mi Perfil</a></li> 
       </ul>
     </nav>
   </header>
-
   <main id="contenido-principal">
     <section class="presentacion">
       <div class="presentacion-contenido">

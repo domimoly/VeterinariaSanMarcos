@@ -5,29 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Detalle de vacunación para perros y gatos en San Marcos.">
   <title>Detalle Vacunas | Veterinaria San Marcos</title>
-  <link rel="stylesheet" href="assets/css/estilos.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/servicios.css">
 </head>
 <body>
   <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
   <div class="barra-contacto">
     <p> Av. San Marcos 123, Rancagua | +56 9 1234 5678 | Urgencias 24 hrs · 365 días</p>
   </div>
+  
   <header class="cabecera-sitio">
     <div class="cabecera-fila">
-      <a class="marca" href="index.html">Veterinaria San Marcos</a>
+      <a class="marca" href="index.html">
+        <img src="assets/img/logo-veterinaria-header.png" alt="Veterinaria San Marcos" class="logo-movil">
+      </a>
       <button type="button" class="boton-menu" id="boton-menu" aria-expanded="false" aria-controls="menu-principal">
         <span class="sr-only">Abrir menú</span>
         <span aria-hidden="true">☰</span>
       </button>
     </div>
-    <nav aria-label="Navegación principal">
+
+    <nav aria-label="Navegación principal" class="nav-principal">
       <ul class="menu" id="menu-principal">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="servicios.html" aria-current="page">Servicios</a></li>
+        
+        <li class="item-logo-desktop">
+          <a href="index.html" class="enlace-logo-desktop">
+            <img src="assets/img/logo-veterinaria-header.png" alt="Veterinaria San Marcos" class="logo-desktop">
+          </a>
+        </li>
+        
         <li><a href="tienda.html">Tienda</a></li>
         <li><a href="carrito.html">Carrito</a></li>
-        <li><a href="mi-perfil.html">Mi Perfil</a></li>
+        <li><a href="login.html">Login</a></li>
       </ul>
     </nav>
   </header>
@@ -37,7 +49,7 @@
         <h1>Vacunación</h1>
     </header> 
     <hr class="divisor-seccion" aria-hidden="true">
-    <!-- VACUNA 1: Séxtuple Canina -->
+    
     <section class="presentacion">
       <div class="presentacion-contenido">
         <h1 class="titulo-detalle">Vacuna Séxtuple Canina <span>Perros</span></h1>
@@ -47,7 +59,7 @@
           <li><span class="icono-check" aria-hidden="true">✓</span> Valor: $18.000</li>
           <li><span class="icono-check" aria-hidden="true">✓</span> Requiere refuerzo anual</li>
         </ul>
-        <a href="agendar-cita.html" class="boton btn-agendar-detalle">Agendar vacuna</a>
+        <a href="agendar-cita.html" class="boton-agenda btn-agendar-detalle">Agendar vacuna</a>
       </div>
       <div class="presentacion-imagen">
         <img src="assets/img/servicios-detalle-vacuna-01.png" alt="Veterinario vacunando a un perro">
@@ -55,7 +67,6 @@
     </section>
     <hr class="divisor-seccion" aria-hidden="true">
 
-    <!-- VACUNA 2: Antirrábica Canina -->
     <section class="presentacion">
       <div class="presentacion-contenido">
         <h1 class="titulo-detalle">Vacuna Antirrábica Canina <span>Perros</span></h1>
@@ -65,7 +76,7 @@
           <li><span class="icono-check" aria-hidden="true">✓</span> Valor: $12.000</li>
           <li><span class="icono-check" aria-hidden="true">✓</span> Obligatoria por ley en Chile</li>
         </ul>
-        <a href="agendar-cita.html" class="boton btn-agendar-detalle">Agendar vacuna</a>
+        <a href="agendar-cita.html" class="boton-agenda btn-agendar-detalle">Agendar vacuna</a>
       </div>
       <div class="presentacion-imagen">
         <img src="assets/img/servicios-detalle-vacuna-03.png" alt="Certificado de vacuna antirrábica">
@@ -73,7 +84,6 @@
     </section>
     <hr class="divisor-seccion" aria-hidden="true">
 
-    <!-- VACUNA 3: Bordetella -->
     <section class="presentacion">
       <div class="presentacion-contenido">
         <h1 class="titulo-detalle">Vacuna Bordetella Canina <span>Perros</span></h1>
@@ -83,7 +93,7 @@
           <li><span class="icono-check" aria-hidden="true">✓</span> Valor: $14.000</li>
           <li><span class="icono-check" aria-hidden="true">✓</span> Previene enfermedades respiratorias</li>
         </ul>
-        <a href="agendar-cita.html" class="boton btn-agendar-detalle">Agendar vacuna</a>
+        <a href="agendar-cita.html" class="boton-agenda btn-agendar-detalle">Agendar vacuna</a>
       </div>
       <div class="presentacion-imagen">
         <img src="assets/img/servicios-detalle-vacuna-06.png" alt="Perro sano en el parque">
@@ -91,7 +101,6 @@
     </section>
     <hr class="divisor-seccion" aria-hidden="true">
 
-    <!-- VACUNA 4: Triple Felina -->
     <section class="presentacion">
       <div class="presentacion-contenido">
         <h1 class="titulo-detalle">Vacuna Triple Felina <span>Gatos</span></h1>
@@ -101,7 +110,7 @@
           <li><span class="icono-check" aria-hidden="true">✓</span> Valor: $17.000</li>
           <li><span class="icono-check" aria-hidden="true">✓</span> Requiere refuerzo anual</li>
         </ul>
-        <a href="agendar-cita.html" class="boton btn-agendar-detalle">Agendar vacuna</a>
+        <a href="agendar-cita.html" class="boton-agenda btn-agendar-detalle">Agendar vacuna</a>
       </div>
       <div class="presentacion-imagen">
         <img src="assets/img/servicios-detalle-vacuna-02.png" alt="Gato siendo examinado en la clínica">
@@ -109,7 +118,6 @@
     </section>
     <hr class="divisor-seccion" aria-hidden="true">
 
-    <!-- VACUNA 5: Bivalente Felina -->
     <section class="presentacion">
       <div class="presentacion-contenido">
         <h1 class="titulo-detalle">Vacuna Bivalente Felina <span>Gatos</span></h1>
@@ -119,7 +127,7 @@
           <li><span class="icono-check" aria-hidden="true">✓</span> Valor: $15.000</li>
           <li><span class="icono-check" aria-hidden="true">✓</span> Requiere refuerzo anual</li>
         </ul>
-        <a href="agendar-cita.html" class="boton btn-agendar-detalle">Agendar vacuna</a>
+        <a href="agendar-cita.html" class="boton-agenda btn-agendar-detalle">Agendar vacuna</a>
       </div>
       <div class="presentacion-imagen">
         <img src="assets/img/servicios-detalle-vacuna-04.png" alt="Vacunación felina">
@@ -127,7 +135,6 @@
     </section>
     <hr class="divisor-seccion" aria-hidden="true">
 
-    <!-- VACUNA 6: Antirrábica Felina -->
     <section class="presentacion">
       <div class="presentacion-contenido">
         <h1 class="titulo-detalle">Vacuna Antirrábica Felina <span>Gatos</span></h1>
@@ -137,7 +144,7 @@
           <li><span class="icono-check" aria-hidden="true">✓</span> Valor: $12.000</li>
           <li><span class="icono-check" aria-hidden="true">✓</span> Certificación incluida</li>
         </ul>
-        <a href="agendar-cita.html" class="boton btn-agendar-detalle">Agendar vacuna</a>
+        <a href="agendar-cita.html" class="boton-agenda btn-agendar-detalle">Agendar vacuna</a>
       </div>
       <div class="presentacion-imagen">
         <img src="assets/img/servicios-detalle-vacuna-05.png" alt="Carnet de vacunación felina">

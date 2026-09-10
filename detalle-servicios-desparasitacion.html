@@ -5,37 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Detalle de desparasitación interna y externa para perros y gatos.">
   <title>Detalle Desparasitación | Veterinaria San Marcos</title>
-  <link rel="stylesheet" href="assets/css/estilos.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/servicios.css">
 </head>
 <body>
   <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
   <div class="barra-contacto">
     <p> Av. San Marcos 123, Rancagua | +56 9 1234 5678 | Urgencias 24 hrs · 365 días</p>
   </div>
+  
   <header class="cabecera-sitio">
     <div class="cabecera-fila">
-      <a class="marca" href="index.html">Veterinaria San Marcos</a>
+      <a class="marca" href="index.html">
+        <img src="assets/img/logo-veterinaria-header.png" alt="Veterinaria San Marcos" class="logo-movil">
+      </a>
       <button type="button" class="boton-menu" id="boton-menu" aria-expanded="false" aria-controls="menu-principal">
         <span class="sr-only">Abrir menú</span>
         <span aria-hidden="true">☰</span>
       </button>
     </div>
-    <nav aria-label="Navegación principal">
+
+    <nav aria-label="Navegación principal" class="nav-principal">
       <ul class="menu" id="menu-principal">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="servicios.html" aria-current="page">Servicios</a></li>
+        
+        <li class="item-logo-desktop">
+          <a href="index.html" class="enlace-logo-desktop">
+            <img src="assets/img/logo-veterinaria-header.png" alt="Veterinaria San Marcos" class="logo-desktop">
+          </a>
+        </li>
+        
         <li><a href="tienda.html">Tienda</a></li>
         <li><a href="carrito.html">Carrito</a></li>
-        <li><a href="mi-perfil.html">Mi Perfil</a></li>
+        <li><a href="login.html">Login</a></li> 
       </ul>
     </nav>
   </header>
-<main id="contenido-principal">
+
+  <main id="contenido-principal">
     <header class="encabezado-contacto">
         <h1>Desparasitación</h1>
     </header> 
     <hr class="divisor-seccion" aria-hidden="true">
+    
     <!-- DESPARASITACIÓN 1: Interna Pequenos -->
     <section class="presentacion">
       <div class="presentacion-contenido">
@@ -46,7 +60,7 @@
           <li><span class="icono-check" aria-hidden="true">✓</span> Valor: $8.000</li>
           <li><span class="icono-check" aria-hidden="true">✓</span> Procedimiento seguro y rápido</li>
         </ul>
-        <a href="agendar-cita.html" class="boton btn-agendar-detalle">Agendar visita</a>
+        <a href="agendar-cita.html" class="boton-agenda btn-agendar-detalle">Agendar visita</a>
       </div>
       <div class="presentacion-imagen">
         <img src="assets/img/servicios-detalle-desparasitacion-01.png" alt="Veterinario dando pastilla a perro pequeño">
@@ -64,7 +78,7 @@
           <li><span class="icono-check" aria-hidden="true">✓</span> Valor: $9.500</li>
           <li><span class="icono-check" aria-hidden="true">✓</span> Producto de alta eficacia</li>
         </ul>
-        <a href="agendar-cita.html" class="boton btn-agendar-detalle">Agendar visita</a>
+        <a href="agendar-cita.html" class="boton-agenda btn-agendar-detalle">Agendar visita</a>
       </div>
       <div class="presentacion-imagen">
         <img src="assets/img/servicios-detalle-desparasitacion-02.png" alt="Perro mediano en la báscula de la clínica">
@@ -82,7 +96,7 @@
           <li><span class="icono-check" aria-hidden="true">✓</span> Valor: $11.000</li>
           <li><span class="icono-check" aria-hidden="true">✓</span> Evita enfermedades zoonóticas</li>
         </ul>
-        <a href="agendar-cita.html" class="boton btn-agendar-detalle">Agendar visita</a>
+        <a href="agendar-cita.html" class="boton-agenda btn-agendar-detalle">Agendar visita</a>
       </div>
       <div class="presentacion-imagen">
         <img src="assets/img/servicios-detalle-desparasitacion-03.png" alt="Perro grande feliz y sano">
@@ -100,7 +114,7 @@
           <li><span class="icono-check" aria-hidden="true">✓</span> Valor: $8.000</li>
           <li><span class="icono-check" aria-hidden="true">✓</span> Prevención de problemas intestinales</li>
         </ul>
-        <a href="agendar-cita.html" class="boton btn-agendar-detalle">Agendar visita</a>
+        <a href="agendar-cita.html" class="boton-agenda btn-agendar-detalle">Agendar visita</a>
       </div>
       <div class="presentacion-imagen">
         <img src="assets/img/servicios-detalle-desparasitacion-04.png" alt="Veterinario revisando la boca de un gato">
@@ -118,13 +132,14 @@
           <li><span class="icono-check" aria-hidden="true">✓</span> Valor: $7.500</li>
           <li><span class="icono-check" aria-hidden="true">✓</span> Incluye producto y aplicación</li>
         </ul>
-        <a href="agendar-cita.html" class="boton btn-agendar-detalle">Agendar visita</a>
+        <a href="agendar-cita.html" class="boton-agenda btn-agendar-detalle">Agendar visita</a>
       </div>
       <div class="presentacion-imagen">
         <img src="assets/img/servicios-detalle-consulta-01.png" alt="Aplicación de pipeta antipulgas">
       </div>
     </section>
   </main>
+  
   <footer class="pie-sitio">
     <div class="pie-contenedor">
       <div class="pie-columna">

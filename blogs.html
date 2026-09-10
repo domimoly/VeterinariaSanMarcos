@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Blog de Veterinaria San Marcos. Noticias, consejos y casos curiosos sobre mascotas.">
   <title>Blog | Veterinaria San Marcos</title>
-  <link rel="stylesheet" href="assets/css/estilos.css">
-  <!-- FontAwesome agregado para los íconos -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/blogs.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -17,20 +17,27 @@
   
   <header class="cabecera-sitio">
     <div class="cabecera-fila">
-      <a class="marca" href="index.html">Veterinaria San Marcos</a>
+      <a class="marca" href="index.html">
+        <img src="assets/img/logo-veterinaria-header.png" alt="Veterinaria San Marcos" class="logo-movil">
+      </a>
       <button type="button" class="boton-menu" id="boton-menu" aria-expanded="false" aria-controls="menu-principal">
         <span class="sr-only">Abrir menú</span>
         <span aria-hidden="true">☰</span>
       </button>
     </div>
-    <nav aria-label="Navegación principal">
+    <nav aria-label="Navegación principal" class="nav-principal">
       <ul class="menu" id="menu-principal">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="servicios.html">Servicios</a></li>
+        <li class="item-logo-desktop">
+          <a href="index.html" class="enlace-logo-desktop">
+            <img src="assets/img/logo-veterinaria-header.png" alt="Veterinaria San Marcos" class="logo-desktop">
+          </a>
+        </li>
         <li><a href="tienda.html">Tienda</a></li>
         <li><a href="carrito.html">Carrito</a></li>
-        <li><a href="mi-perfil.html">Mi Perfil</a></li>
+        <li><a href="login.html">Login</a></li>
       </ul>
     </nav>
   </header>
@@ -42,7 +49,6 @@
     </header>
 
     <ul class="grilla-blogs">
-      <!-- Tarjeta Blog 1 -->
       <li class="tarjeta-blog">
         <img src="/assets/img/servicios-detalle-vacuna-01.png" alt="Cachorro recibiendo su primera vacuna" class="tarjeta-blog-img">
         <div class="tarjeta-blog-contenido">
@@ -58,7 +64,6 @@
         </div>
       </li>
 
-      <!-- Tarjeta Blog 2 -->
       <li class="tarjeta-blog">
         <img src="/assets/img/blog-01.png" alt="Gato siendo pesado en la clínica" class="tarjeta-blog-img">
         <div class="tarjeta-blog-contenido">
@@ -74,7 +79,6 @@
         </div>
       </li>
 
-      <!-- Tarjeta Blog 3 -->
       <li class="tarjeta-blog">
         <img src="/assets/img/servicios-detalle-desparasitacion-04.png" alt="Gato comiendo" class="tarjeta-blog-img">
         <div class="tarjeta-blog-contenido">
@@ -90,7 +94,6 @@
         </div>
       </li>
 
-      <!-- Tarjeta Blog 4 -->
       <li class="tarjeta-blog">
         <img src="/assets/img/servicios-detalle-vacuna-03.png" alt="Dueño jugando con su mascota" class="tarjeta-blog-img">
         <div class="tarjeta-blog-contenido">
