@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gestión de usuarios - Veterinaria San Marcos">
+  <title>Usuarios | Admin San Marcos</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style-admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="admin-layout">
+    
+    <!-- BARRA LATERAL -->
+    <aside class="admin-sidebar" id="admin-sidebar">
+      <div class="admin-logo">
+        <i class="fa-solid fa-paw"></i>
+        <h2>San Marcos Admin</h2>
+      </div>
+      <nav class="admin-nav" aria-label="Navegación del Administrador">
+        <ul>
+          <li><a href="admin-home.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a></li>
+          <li><a href="admin-productos.html"><i class="fa-solid fa-box"></i> Productos</a></li>
+          <!-- Enlace Activo -->
+          <li><a href="admin-usuarios.html" class="activo"><i class="fa-solid fa-users"></i> Usuarios</a></li>
+          <li><a href="#"><i class="fa-solid fa-file-invoice"></i> Reportes</a></li>
+          <li><a href="#"><i class="fa-solid fa-gear"></i> Configuración</a></li>
+          <li class="nav-logout"><a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- ÁREA CENTRAL -->
+    <main class="admin-main">
+      
+      <header class="admin-header">
+        <button type="button" class="btn-menu-admin" id="btn-menu-admin" aria-label="Abrir menú lateral">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <h1>Gestión de Usuarios</h1>
+      </header>
+      
+      <section class="admin-contenido">
+         
+         <div class="tarjeta-admin">
+            
+            <!-- VISTA 1: LISTADO DE USUARIOS -->
+            <div id="vista-lista-usuarios">
+                <div class="cabecera-mantenedor" style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                    <h3>Listado de Usuarios</h3>
+                    <button type="button" class="boton btn-oscuro" id="btn-mostrar-formulario">
+                        <i class="fa-solid fa-plus"></i> Nuevo Usuario
+                    </button>
+                </div>
+
+                <div class="tabla-responsiva" style="overflow-x: auto;">
+                    <table class="tabla-admin" style="width: 100%; border-collapse: collapse; text-align: left;">
+                        <thead style="background-color: #f8f9fa;">
+                            <tr>
+                                <th style="padding: 12px; border-bottom: 2px solid #ccc;">RUN</th>
+                                <th style="padding: 12px; border-bottom: 2px solid #ccc;">Nombre Completo</th>
+                                <th style="padding: 12px; border-bottom: 2px solid #ccc;">Correo</th>
+                                <th style="padding: 12px; border-bottom: 2px solid #ccc;">Rol</th>
+                                <th style="padding: 12px; border-bottom: 2px solid #ccc;">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 12px; border-bottom: 1px solid #eee;">19011022K</td>
+                                <td style="padding: 12px; border-bottom: 1px solid #eee;">María González</td>
+                                <td style="padding: 12px; border-bottom: 1px solid #eee;">admin@duoc.cl</td>
+                                <td style="padding: 12px; border-bottom: 1px solid #eee;"><strong>Administrador</strong></td>
+                                <td style="padding: 12px; border-bottom: 1px solid #eee;">
+                                    <button class="boton" style="padding: 5px 10px; background-color: #f39c12; color: white; border: none;">Editar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- VISTA 2: FORMULARIO NUEVO USUARIO (Oculto por defecto) -->
+            <div id="vista-formulario-usuario" style="display: none;">
+                <div class="cabecera-mantenedor" style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                    <h3>Registrar Nuevo Usuario</h3>
+                    <button type="button" class="boton" id="btn-volver-lista" style="background-color: #ccc; color: #333; border: none;">
+                        ← Volver a la lista
+                    </button>
+                </div>
+
+                <form action="#" method="POST" id="form-admin-usuario" class="formulario" novalidate>
+                    <fieldset style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; border: none; padding: 0;">
+                        
+                        <div class="campo" style="grid-column: span 2;">
+                            <label>RUN (Sin puntos ni guion)</label>
+                            <input type="text" id="admin-run" required>
+                        </div>
+
+                        <div class="campo">
+                            <label>Nombre</label>
+                            <input type="text" id="admin-nombre" maxlength="50" required>
+                        </div>
+
+                        <div class="campo">
+                            <label>Apellidos</label>
+                            <input type="text" id="admin-apellidos" maxlength="100" required>
+                        </div>
+
+                        <div class="campo" style="grid-column: span 2;">
+                            <label>Correo Electrónico</label>
+                            <input type="email" id="admin-correo" maxlength="100" required>
+                        </div>
+
+                        <div class="campo">
+                            <label>Fecha Nacimiento (Opcional)</label>
+                            <input type="date" id="admin-fecha">
+                        </div>
+
+                        <div class="campo">
+                            <label>Tipo de Usuario</label>
+                            <select id="admin-rol" required>
+                                <option value="">-- Seleccione Rol --</option>
+                                <option value="Administrador">Administrador</option>
+                                <option value="Vendedor">Vendedor</option>
+                                <option value="Cliente">Cliente</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label>Región</label>
+                            <select id="admin-region" required>
+                                <option value="">-- Seleccione Región --</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label>Comuna</label>
+                            <select id="admin-comuna" required disabled>
+                                <option value="">-- Primero seleccione Región --</option>
+                            </select>
+                        </div>
+
+                        <div class="campo" style="grid-column: span 2;">
+                            <label>Dirección</label>
+                            <input type="text" id="admin-direccion" maxlength="300" required>
+                        </div>
+
+                        <div class="campo" style="grid-column: span 2; margin-top: 20px;">
+                            <button type="submit" class="boton btn-oscuro" style="width: 100%;">Crear Usuario</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+         </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>
