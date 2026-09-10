@@ -415,15 +415,16 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }
-    if (!localStorage.getItem('productosVeterinaria')) {
+ /*   if (!localStorage.getItem('productosVeterinaria')) {
         const productosBase = [
             { codigo: "MED-001", nombre: "Amoxibay 250mg", categoria: "Medicamento", precio: 4200, stock: 10, imagen: "assets/img/amoxibay.jpg" },
             { codigo: "MED-002", nombre: "Enrox 50mg", categoria: "Medicamento", precio: 6800, stock: 10, imagen: "assets/img/NEXGARD.jpg" },
             { codigo: "MED-003", nombre: "Metrobay 250mg", categoria: "Medicamento", precio: 3900, stock: 10, imagen: "assets/img/METROBAY.jpg" },
             { codigo: "ANT-004", nombre: "Nexgard", categoria: "Antiparasitario", precio: 9500, stock: 10, imagen: "assets/img/NEXGARD.jpg" },
             { codigo: "ANT-005", nombre: "Bravecto", categoria: "Antiparasitario", precio: 18900, stock: 10, imagen: "assets/img/BRAVECTO.png" }
-            // ... y así sucesivamente con el resto de tus productos
+            
         ];
         localStorage.setItem('productosVeterinaria', JSON.stringify(productosBase));
     }
+        */
 });
